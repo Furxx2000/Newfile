@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup box</title>
+    <link rel="stylesheet" href="./CSS/Popup-box.css">
+</head>
+
+<body>
+    <button data-modal-target=#modal>Open Modal</button>
+    <div class="modal active" id="modal">
+        <div class="modal-header">
+            <div class="title">Example</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate nesciunt natus ipsa perferendis, quidem
+            optio eligendi voluptatum deserunt dolor excepturi? Deserunt perferendis quo quas odio hic maxime, sit
+            facere repellat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis expedita fugit ea enim vel
+            vero quod? Expedita velit omnis voluptatum. Laudantium sed cumque quod, molestias qui corporis facilis
+            quisquam sequi.
+        </div>
+    </div>
+    <div class="active" id="overlay"></div>
+
+    <script src="./JS/Popup-box.js"></script>
+</body>
+
+</html>

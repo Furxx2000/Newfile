@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mid-Seminar</title>
+    <link rel="stylesheet" href="./CSS/Mid-Seminar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="container">
+            <div class="grey-top">
+                <div class="flexbox">
+                    <div>
+                        <span>說明</span> <span>|</span> <span>Mikey,&nbsp&nbsp你好</span>
+                    </div>
+                    <div class="user-image">
+                        <img src="./Images/JPG/User-imagesmall.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="white-mid ">
+                <div class="left-col">
+                    <a href="./Mid-Seminar.html">
+                        <u>Players</u>
+                        <img src="./Images/PNG/basketball-1799781-1528760.png" alt="">
+                    </a>
+                </div>
+
+                <div class="mid-col">
+                    <div><a href="#">數據</a></div>
+                    <div><a href="#">球員</a></div>
+                    <div><a href="#">商品</a></div>
+                    <div><a href="#">周邊</a></div>
+                </div>
+
+                <div class="right-col">
+                    <div class="search">
+                        <a href="#">
+                            <svg class="icon-search">
+                                <use xlink:href="./icomoon/symbol-defs.svg#icon-search"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <input type="text" id="search" class="search-input" name="search" placeholder="搜尋">
+
+                    <div class="heart">
+                        <a href="./Favor-list.html">
+                            <svg class="icon-heart">
+                                <use xlink:href="./icomoon/symbol-defs.svg#icon-heart"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="shopping-bag">
+                        <a href="#">
+                            <svg class="icon-shopping-bag">
+                                <use xlink:href="./icomoon/symbol-defs.svg#icon-shopping-bag"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="search2">
+                        <a href="#">
+                            <svg class="icon-search2">
+                                <use xlink:href="./icomoon/symbol-defs.svg#icon-search"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="hamburger" id="mobile-cta">
+                        <input type="checkbox" name="" id="check">
+                        <div class="hamburger-menu-container">
+                            <div class="hamburger-menu">
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav>
+                        <div class="flexbox">
+                            <ul>
+                                <li>
+                                    <div class="user-image">
+                                        <img src="./Images/JPG/User-imagesmall.jpg" alt="">
+                                    </div>
+
+                                    <div>
+                                        <p>Mikey，<span>你好</span></p>
+                                    </div>
+
+                                    <div>
+                                        <svg class="icon-arrow_forward_ios">
+                                            <use xlink:href="./icomoon/symbol-defs.svg#icon-arrow_forward_ios"></use>
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>數據</p>
+                                    </div>
+                                    <div>
+                                        <svg class="icon-arrow_forward_ios">
+                                            <use xlink:href="./icomoon/symbol-defs.svg#icon-arrow_forward_ios"></use>
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>球隊</p>
+                                    </div>
+                                    <div>
+                                        <svg class="icon-arrow_forward_ios">
+                                            <use xlink:href="./icomoon/symbol-defs.svg#icon-arrow_forward_ios"></use>
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>球員</p>
+                                    </div>
+                                    <div>
+                                        <svg class="icon-arrow_forward_ios">
+                                            <use xlink:href="./icomoon/symbol-defs.svg#icon-arrow_forward_ios"></use>
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>周邊商品</p>
+                                    </div>
+                                    <div>
+                                        <svg class="icon-arrow_forward_ios">
+                                            <use xlink:href="./icomoon/symbol-defs.svg#icon-arrow_forward_ios"></use>
+                                        </svg>
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="mobile-logo">
+                            <u>Players</u>
+                            <img src="./Images/PNG/basketball-1799781-1528760.png" alt="">
+                        </div>
+
+                        <div class="bottom">
+                            <a href="./Favor-list.html">
+                                <div class="favorite flex">
+                                    <svg class="icon-heart">
+                                        <use xlink:href="./icomoon/symbol-defs.svg#icon-heart"></use>
+                                    </svg>
+                                    <p>最愛</p>
+                                </div>
+                            </a>
+                            <div class="shopping-bag2 flex">
+                                <svg class="icon-shopping-bag">
+                                    <use xlink:href="./icomoon/symbol-defs.svg#icon-shopping-bag"></use>
+                                </svg>
+                                <p>購物籃</p>
+                            </div>
+                            <div class="order flex">
+                                <svg class="icon-archive">
+                                    <use xlink:href="./icomoon/symbol-defs.svg#icon-archive"></use>
+                                </svg>
+                                <p>訂單</p>
+                            </div>
+                            <div class="question flex">
+                                <svg class="icon-help-circle">
+                                    <use xlink:href="./icomoon/symbol-defs.svg#icon-help-circle"></use>
+                                </svg>
+                                <p>說明</p>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="grey-bottom">
+                <p>快速了解相關數據</p>
+                <p>加入我們</p>
+            </div>
+        </div>
+    </div>
+
+    <a href="#">
+        <div class="feedback-cta">意見回饋</div>
+    </a>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="banner-mobile"></div>
+            <div class="banner-ipad-pc">
+                <h1 class="h1-ipad">精準數據, 鎖定勝局</h1>
+                <p>打出更好的比賽</p>
+            </div>
+
+            <h1 class="h1-mobile">從現在, <br>掌握每個關鍵</h1>
+            <button class="hero-cta">立刻分析</button>
+        </div>
+    </section>
+
+    <section class="data-section">
+        <div class="container">
+
+            <div class="gallery">
+                <div class="img-container">
+                    <img src="./Images/JPG/Pleague-teams-full.jpg" alt="#是時候了" data-original="Pleague-teams-full.jpg" />
+                </div>
+                <div class="img-container">
+                    <img src="./Images/JPG/林志傑-full.png" alt="富邦勇士 #12 林志傑" data-original="林志傑-full.png" />
+                </div>
+                <div class="img-container">
+                    <img src="./Images/JPG/Show time.jpg" alt="It's show time" data-original="Show time.jpg" />
+                </div>
+                <div class="img-container">
+                    <img src="./Images/JPG/Dawson.jpg" alt="Dunk you very much" data-original="Dawson.jpg" />
+                </div>
+            </div>
+            <div class="modal">
+                <img src="./Images/JPG/Picture2-full.jpg" alt="" class="full-img" />
+                <p class="caption">dvfvfvfvff</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="game-schedule-section">
+        <div class="container">
+            <div class="game-schedule-text">快速訂票</div>
+            <div class="main-carousel one" data-flickity='{ "freeScroll": true}'>
+                <div class="carousel-cell">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/新竹工城獅logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">新竹街口攻城獅<br>Hsinchu Jko Lioneers</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-01(一) 16:45</div>
+                                <div class="game-number">G32</div>
+                                <div class="game-location">新竹縣體育館</div>
+                                <div class="game-scoreboard">83 76</div>
+                                <div class="game-stats"><span>已結束</span></div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/臺北富邦勇士.png" alt="">
+                                </div>
+                                <div class="team-name">台北富邦勇士<br>Taipei Fubon Bravers</div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="bottombox">
+                                <div class="ball-pic">
+                                    <img src="./Images/PNG/Basketball-logo.png">
+                                </div>
+                                <p>賽事回顧</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-cell" style="width: 100%;">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/福爾摩沙台新夢想家.png" alt="">
+                                </div>
+                                <div class="team-name">福爾摩沙夢想家<br>Formosa Dreamers</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-06(六) 17:00</div>
+                                <div class="game-number">G33</div>
+                                <div class="game-location">台北和平籃球館</div>
+                                <div class="game-scoreboard">104 114</div>
+                                <div class="game-stats">已結束</div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/臺北富邦勇士.png" alt="">
+                                </div>
+                                <div class="team-name">台北富邦勇士<br>Taipei Fubon Bravers</div>
+                            </div>
+                        </div>
+                        <div class="bottombox">
+                            <div class="ball-pic">
+                                <img src="./Images/PNG/Basketball-logo.png">
+                            </div>
+                            <p>賽事回顧</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-cell" style="width: 100%;">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/新竹工城獅logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">新竹街口攻城獅<br>Hsinchu Jko Lioneers</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-07(日) 17:00</div>
+                                <div class="game-number">G34</div>
+                                <div class="game-location">台北和平籃球館</div>
+                                <div class="game-scoreboard">105 109</div>
+                                <div class="game-stats">已結束</div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/臺北富邦勇士.png" alt="">
+                                </div>
+                                <div class="team-name">台北富邦勇士<br>Taipei Fubon Bravers</div>
+                            </div>
+                        </div>
+                        <div class="bottombox">
+                            <div class="ball-pic">
+                                <img src="./Images/PNG/Basketball-logo.png">
+                            </div>
+                            <p>賽事回顧</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-cell" style="width: 100%;">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/桃園領航員Logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">桃園領航猿<br>Taoyuan Pilots</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-13(六) 14:30</div>
+                                <div class="game-number">G35</div>
+                                <div class="game-location">新竹縣體育館</div>
+                                <div class="game-scoreboard">88 105</div>
+                                <div class="game-stats">已結束</div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/新竹工城獅logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">新竹街口攻城獅<br>Hsinchu Jko Lioneers</div>
+                            </div>
+                        </div>
+                        <div class="bottombox">
+                            <div class="ball-pic">
+                                <img src="./Images/PNG/Basketball-logo.png">
+                            </div>
+                            <p>賽事回顧</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 下面為平板顯示 -->
+            <div class="main-carousel two" data-flickity='{ "groupCells": 2 }'>
+                <div class="carousel-cell" style="width: 47%;">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/新竹工城獅logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">新竹街口攻城獅<br>Hsinchu Jko Lioneers</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-01(一) 16:45</div>
+                                <div class="game-number">G32</div>
+                                <div class="game-location">新竹縣體育館</div>
+                                <div class="game-scoreboard">83 76</div>
+                                <div class="game-stats"><span>已結束</span></div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/臺北富邦勇士.png" alt="">
+                                </div>
+                                <div class="team-name">台北富邦勇士<br>Taipei Fubon Bravers</div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="bottombox">
+                                <div class="ball-pic">
+                                    <img src="./Images/PNG/Basketball-logo.png">
+                                </div>
+                                <p>賽事回顧</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-cell" style="width: 48%">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/福爾摩沙台新夢想家.png" alt="">
+                                </div>
+                                <div class="team-name">福爾摩沙台新夢想家<br>Formosa Dreamers</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-06(六) 17:00</div>
+                                <div class="game-number">G33</div>
+                                <div class="game-location">台北和平籃球館</div>
+                                <div class="game-scoreboard">104 114</div>
+                                <div class="game-stats">已結束</div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/臺北富邦勇士.png" alt="">
+                                </div>
+                                <div class="team-name">台北富邦勇士<br>Taipei Fubon Bravers</div>
+                            </div>
+                        </div>
+                        <div class="bottombox">
+                            <div class="ball-pic">
+                                <img src="./Images/PNG/Basketball-logo.png">
+                            </div>
+                            <p>賽事回顧</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-cell" style="width: 49%;">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/新竹工城獅logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">新竹街口攻城獅<br>Hsinchu Jko Lioneers</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-07(日) 17:00</div>
+                                <div class="game-number">G34</div>
+                                <div class="game-location">台北和平籃球館</div>
+                                <div class="game-scoreboard">104 114</div>
+                                <div class="game-stats">已結束</div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/臺北富邦勇士.png" alt="">
+                                </div>
+                                <div class="team-name">台北富邦勇士<br>Taipei Fubon Bravers</div>
+                            </div>
+                        </div>
+                        <div class="bottombox">
+                            <div class="ball-pic">
+                                <img src="./Images/PNG/Basketball-logo.png">
+                            </div>
+                            <p>賽事回顧</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-cell" style="width: 49%;">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/桃園領航員Logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">桃園領航猿<br>Taoyuan Pilots</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-13(六) 14:30</div>
+                                <div class="game-number">G35</div>
+                                <div class="game-location">新竹縣體育館</div>
+                                <div class="game-scoreboard">104 114</div>
+                                <div class="game-stats">已結束</div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/新竹工城獅logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">新竹街口攻城獅<br>Hsinchu Jko Lioneers</div>
+                            </div>
+                        </div>
+                        <div class="bottombox">
+                            <div class="ball-pic">
+                                <img src="./Images/PNG/Basketball-logo.png">
+                            </div>
+                            <p>賽事回顧</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 下面是電腦顯示 -->
+            <div class="main-carousel three" data-flickity='{ "groupCells": 4 }'>
+                <div class="carousel-cell" style="width: 25%;">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/新竹工城獅logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">新竹街口攻城獅<br>Hsinchu Jko Lioneers</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-01(一) 16:45</div>
+                                <div class="game-number">G32</div>
+                                <div class="game-location">新竹縣體育館</div>
+                                <div class="game-scoreboard">83 76</div>
+                                <div class="game-stats"><span>已結束</span></div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/臺北富邦勇士.png" alt="">
+                                </div>
+                                <div class="team-name">台北富邦勇士<br>Taipei Fubon Bravers</div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="bottombox">
+                                <div class="ball-pic">
+                                    <img src="./Images/PNG/Basketball-logo.png">
+                                </div>
+                                <p>賽事回顧</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-cell" style="width: 25%">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/福爾摩沙台新夢想家.png" alt="">
+                                </div>
+                                <div class="team-name">福爾摩沙夢想家<br>Formosa Dreamers</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-06(六) 17:00</div>
+                                <div class="game-number">G33</div>
+                                <div class="game-location">台北和平籃球館</div>
+                                <div class="game-scoreboard">104 114</div>
+                                <div class="game-stats">已結束</div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/臺北富邦勇士.png" alt="">
+                                </div>
+                                <div class="team-name">台北富邦勇士<br>Taipei Fubon Bravers</div>
+                            </div>
+                        </div>
+                        <div class="bottombox">
+                            <div class="ball-pic">
+                                <img src="./Images/PNG/Basketball-logo.png">
+                            </div>
+                            <p>賽事回顧</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-cell" style="width: 26%;">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/新竹工城獅logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">新竹街口攻城獅<br>Hsinchu Jko Lioneers</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-07(日) 17:00</div>
+                                <div class="game-number">G34</div>
+                                <div class="game-location">台北和平籃球館</div>
+                                <div class="game-scoreboard">104 114</div>
+                                <div class="game-stats">已結束</div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/臺北富邦勇士.png" alt="">
+                                </div>
+                                <div class="team-name">台北富邦勇士<br>Taipei Fubon Bravers</div>
+                            </div>
+                        </div>
+                        <div class="bottombox">
+                            <div class="ball-pic">
+                                <img src="./Images/PNG/Basketball-logo.png">
+                            </div>
+                            <p>賽事回顧</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-cell" style="width: 25%;">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/桃園領航員Logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">桃園領航猿<br>Taoyuan Pilots</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-13(六) 14:30</div>
+                                <div class="game-number">G35</div>
+                                <div class="game-location">新竹縣體育館</div>
+                                <div class="game-scoreboard">104 114</div>
+                                <div class="game-stats">已結束</div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/新竹工城獅logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">新竹街口攻城獅<br>Hsinchu Jko Lioneers</div>
+                            </div>
+                        </div>
+                        <div class="bottombox">
+                            <div class="ball-pic">
+                                <img src="./Images/PNG/Basketball-logo.png">
+                            </div>
+                            <p>賽事回顧</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-cell" style="width: 25%;">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/福爾摩沙台新夢想家.png" alt="">
+                                </div>
+                                <div class="team-name">福爾摩沙夢想家<br>Formosa Dreamers</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-13(六) 17:00</div>
+                                <div class="game-number">G36</div>
+                                <div class="game-location">台北和平籃球館</div>
+                                <div class="game-scoreboard">94 99</div>
+                                <div class="game-stats">已結束</div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/臺北富邦勇士.png" alt="">
+                                </div>
+                                <div class="team-name">台北富邦勇士<br>Taipei Fubon Bravers</div>
+                            </div>
+                        </div>
+                        <div class="bottombox">
+                            <div class="ball-pic">
+                                <img src="./Images/PNG/Basketball-logo.png">
+                            </div>
+                            <p>賽事回顧</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-cell" style="width: 25%;">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/福爾摩沙台新夢想家.png" alt="">
+                                </div>
+                                <div class="team-name">福爾摩沙夢想家<br>Formosa Dreamers</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-14(日) 14:30</div>
+                                <div class="game-number">G37</div>
+                                <div class="game-location">新竹縣體育館</div>
+                                <div class="game-scoreboard">105 112</div>
+                                <div class="game-stats">已結束</div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/新竹工城獅logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">新竹街口攻城獅<br>Hsinchu Jko Lioneers</div>
+                            </div>
+                        </div>
+                        <div class="bottombox">
+                            <div class="ball-pic">
+                                <img src="./Images/PNG/Basketball-logo.png">
+                            </div>
+                            <p>賽事回顧</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-cell" style="width: 25%;">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/桃園領航員Logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">桃園領航猿<br>Taoyuan Pilots</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-14(日) 17:00</div>
+                                <div class="game-number">G38</div>
+                                <div class="game-location">台北和平籃球館</div>
+                                <div class="game-scoreboard">94 124</div>
+                                <div class="game-stats">已結束</div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/臺北富邦勇士.png" alt="">
+                                </div>
+                                <div class="team-name">台北富邦勇士<br>Taipei Fubon Bravers</div>
+                            </div>
+                        </div>
+                        <div class="bottombox">
+                            <div class="ball-pic">
+                                <img src="./Images/PNG/Basketball-logo.png">
+                            </div>
+                            <p>賽事回顧</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-cell" style="width: 25%;">
+                    <div class="game">
+                        <div class="topbox">
+                            <div class="left-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/新竹工城獅logosmall.png" alt="">
+                                </div>
+                                <div class="team-name">新竹街口攻城獅<br>Hsinchu Jko Lioneers</div>
+                            </div>
+                            <div class="mid-box">
+                                <div class="game-date">2021-03-20(六) 14:30</div>
+                                <div class="game-number">G39</div>
+                                <div class="game-location">新竹縣體育館</div>
+                                <div class="game-scoreboard">@</div>
+                                <div class="game-stats"></div>
+                            </div>
+                            <div class="right-box">
+                                <div class="team-pic">
+                                    <img src="./Images/PNG/福爾摩沙台新夢想家.png" alt="">
+                                </div>
+                                <div class="team-name">福爾摩沙夢想家<br>Formosa Dreamers</div>
+                            </div>
+                        </div>
+                        <div class="bottombox commute">
+                            <div class="ball-pic">
+                                <img src="./icomoon/PNG/commute-24px.png">
+                            </div>
+                            <p>交通資訊</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-stats-section">
+        <div class="container">
+            <div class="header-section">
+                <div class="header-text">本季各隊戰績</div>
+                <div class="color-reminder">
+                    <div class="yellow-best">
+                        <img src="./Images/PNG/Ellipse 21.png" alt="">
+                        <span>聯盟最佳</span>
+                    </div>
+                    <div class="red-worst">
+                        <img src="./Images/PNG/Ellipse 22.png" alt="">
+                        <span>聯盟最差</span>
+                    </div>
+                </div>
+            </div>
+            <div class="team-stats">
+                <div class="main-carousel one" data-flickity='{ "freeScroll": true}'>
+                    <div class="carousel-cell" style="width: 100%;">
+                        <div class="braversteam">
+                            <div class="top-logo">
+                                <img src="./Images/PNG/富邦勇-logoline.png" alt="">
+                                <p>11W <span>/</span> 5L</p>
+                            </div>
+                            <div class="bottom-stats">
+                                <div class="statictis">
+                                    <ul>
+                                        <li class="text">場均得分</li>
+                                        <li class="best number">96.88</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">場均失分</li>
+                                        <li class="best number">86.43</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">二分球%</li>
+                                        <li class="number">48.75</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">三分球%</li>
+                                        <li class="number">28.75</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">罰球%</li>
+                                        <li class="number">67.37</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-cell" style="width: 100%;">
+                        <div class="pilots-team">
+                            <div class="top-logo">
+                                <img src="./Images/PNG/桃園領航猿-Logoline.png" alt="">
+                                <p>9W <span>/</span> 7L</p>
+                            </div>
+                            <div class="bottom-stats">
+                                <div class="statictis">
+                                    <ul>
+                                        <li class="text">場均得分</li>
+                                        <li class="number">95.31</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">場均失分</li>
+                                        <li class="number">89.64</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">二分球%</li>
+                                        <li class="best number">49.75</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">三分球%</li>
+                                        <li class="best number">32.03</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">罰球%</li>
+                                        <li class="worst number">65.52</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell" style="width: 100%;">
+                        <div class="dreamers-team down">
+                            <div class="top-logo">
+                                <img src="./Images/PNG/Dreamers-logoline.png" alt="">
+                                <p>8W <span>/</span> 7L</p>
+                            </div>
+                            <div class="bottom-stats">
+                                <div class="statictis">
+                                    <ul>
+                                        <li class="text">場均得分</li>
+                                        <li class="number">93.67</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">場均失分</li>
+                                        <li class="number">98.56</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">二分球%</li>
+                                        <li class="number">45.67</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">三分球%</li>
+                                        <li class="number">31.74</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">罰球%</li>
+                                        <li class="best number">72.09</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell" style="width: 100%;">
+                        <div class="lioneers-team">
+                            <div class="top-logo">
+                                <img src="./Images/PNG/Lioneers-logoline.png" alt="">
+                                <p class="up">4W <span>/</span> 13L</p>
+                            </div>
+                            <div class="bottom-stats up">
+                                <div class="statictis">
+                                    <ul>
+                                        <li class="text">場均得分</li>
+                                        <li class="worst number">96.88</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">場均失分</li>
+                                        <li class="worst number">86.43</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">二分球%</li>
+                                        <li class="worst number">48.75</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">三分球%</li>
+                                        <li class="worst number">28.75</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">罰球%</li>
+                                        <li class="number">67.37</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 下面是平板顯示 -->
+                <div class="main-carousel two" data-flickity='{ "groupCells": "2" }'>
+                    <div class="carousel-cell" style="width: 50%;">
+                        <div class="bravers-team">
+                            <div class="top-logo">
+                                <img src="./Images/PNG/富邦勇-logoline.png" alt="">
+                                <p>11W <span>/</span> 5L</p>
+                            </div>
+                            <div class="bottom-stats">
+                                <div class="statictis">
+                                    <ul>
+                                        <li class="text">場均得分</li>
+                                        <li class="best number">96.88</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">場均失分</li>
+                                        <li class="best number">86.43</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">二分球%</li>
+                                        <li class="number">48.75</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">三分球%</li>
+                                        <li class="number">28.75</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">罰球%</li>
+                                        <li class="number">67.37</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-cell" style="width: 50%;">
+                        <div class="pilots-team">
+                            <div class="top-logo">
+                                <img src="./Images/PNG/桃園領航猿-Logoline.png" alt="">
+                                <p>9W <span>/</span> 7L</p>
+                            </div>
+                            <div class="bottom-stats">
+                                <div class="statictis">
+                                    <ul>
+                                        <li class="text">場均得分</li>
+                                        <li class="number">95.31</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">場均失分</li>
+                                        <li class="number">89.64</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">二分球%</li>
+                                        <li class="best number">49.75</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">三分球%</li>
+                                        <li class="best number">32.03</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">罰球%</li>
+                                        <li class="worst number">65.52</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell" style="width: 50%;">
+                        <div class="dreamers-team down">
+                            <div class="top-logo">
+                                <img src="./Images/PNG/Dreamers-logoline.png" alt="">
+                                <p>8W <span>/</span> 7L</p>
+                            </div>
+                            <div class="bottom-stats">
+                                <div class="statictis">
+                                    <ul>
+                                        <li class="text">場均得分</li>
+                                        <li class="number">93.67</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">場均失分</li>
+                                        <li class="number">98.56</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">二分球%</li>
+                                        <li class="number">45.67</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">三分球%</li>
+                                        <li class="number">31.74</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">罰球%</li>
+                                        <li class="best number">72.09</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-cell" style="width: 50%;">
+                        <div class="lioneers-team">
+                            <div class="top-logo">
+                                <img src="./Images/PNG/Lioneers-logoline.png" alt="">
+                                <p class="up">4W <span>/</span> 13L</p>
+                            </div>
+                            <div class="bottom-stats up">
+                                <div class="statictis">
+                                    <ul>
+                                        <li class="text">場均得分</li>
+                                        <li class="worst number">96.88</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">場均失分</li>
+                                        <li class="worst number">86.43</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">二分球%</li>
+                                        <li class="worst number">48.75</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">三分球%</li>
+                                        <li class="worst number">28.75</li>
+                                    </ul>
+                                    <ul>
+                                        <li class="text">罰球%</li>
+                                        <li class="number">67.37</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 下面是電腦顯示 -->
+                <div class="three">
+
+                    <div class="team">
+                        <div class="top-logo">
+                            <img src="./Images/PNG/富邦勇-logoline.png" alt="">
+                            <p>11W <span>/</span> 5L</p>
+                        </div>
+                        <div class="bottom-stats">
+                            <div class="statictis">
+                                <ul>
+                                    <li class="text">場均得分</li>
+                                    <li class="best number">96.88</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">場均失分</li>
+                                    <li class="best number">86.43</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">二分球%</li>
+                                    <li class="number">48.75</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">三分球%</li>
+                                    <li class="number">28.75</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">罰球%</li>
+                                    <li class="number">67.37</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="team">
+                        <div class="top-logo">
+                            <img src="./Images/PNG/桃園領航猿-Logoline.png" alt="">
+                            <p>9W <span>/</span> 7L</p>
+                        </div>
+                        <div class="bottom-stats">
+                            <div class="statictis">
+                                <ul>
+                                    <li class="text">場均得分</li>
+                                    <li class="number">95.31</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">場均失分</li>
+                                    <li class="number">89.64</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">二分球%</li>
+                                    <li class="best number">49.75</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">三分球%</li>
+                                    <li class="best number">32.03</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">罰球%</li>
+                                    <li class="worst number">65.52</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team down">
+                        <div class="top-logo">
+                            <img src="./Images/PNG/Dreamers-logoline.png" alt="">
+                            <p>8W <span>/</span> 7L</p>
+                        </div>
+                        <div class="bottom-stats">
+                            <div class="statictis">
+                                <ul>
+                                    <li class="text">場均得分</li>
+                                    <li class="number">93.67</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">場均失分</li>
+                                    <li class="number">98.56</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">二分球%</li>
+                                    <li class="number">45.67</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">三分球%</li>
+                                    <li class="number">31.74</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">罰球%</li>
+                                    <li class="best number">72.09</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="team">
+                        <div class="top-logo">
+                            <img src="./Images/PNG/Lioneers-logoline.png" alt="">
+                            <p class="up">4W <span>/</span> 13L</p>
+                        </div>
+                        <div class="bottom-stats up">
+                            <div class="statictis">
+                                <ul>
+                                    <li class="text">場均得分</li>
+                                    <li class="worst number">96.88</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">場均失分</li>
+                                    <li class="worst number">86.43</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">二分球%</li>
+                                    <li class="worst number">48.75</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">三分球%</li>
+                                    <li class="worst number">28.75</li>
+                                </ul>
+                                <ul>
+                                    <li class="text">罰球%</li>
+                                    <li class="number">67.37</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="subscribe-section">
+        <div class="container">
+            <div class="logo-section">
+                <div class="left">
+                    <span class="big"><u>Players</u></span>
+                    <svg width="250" height="14" viewBox="0 0 250 14">
+                        <text font-family="'Noto Sans TC'" font-size="8" x="4" y="1em" fill="000">
+                            最新消息、優惠票等預售
+                    </svg>
+
+                    <svg class="svg2" width="250" height="14" viewBox="0 0 250 14">
+                        <text font-family="'Noto Sans TC'" font-size="8" x="4" y="1em" fill="000">
+                            瀏覽最新商品、領取優惠票券
+                    </svg>
+                    <img src="./Images/PNG/basketball-1799781-1528760.png" alt="">
+                </div>
+            </div>
+
+            <div class="email-input">
+                <div class="email-cta">
+                    <input type="text" id="email" class="email" name="email" placeholder="Enter Email">
+                </div>
+
+                <button type="submit" class="subscribe-btn">
+                    <svg id="subscribe-cta" class="icon-mail">
+                        <use xlink:href="./icomoon/symbol-defs.svg#icon-mail"></use>
+                    </svg>
+                    <p>訂閱</p>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="statistic-section">
+        <div class="container">
+            <div class="top-btns">
+                <div class="btn first">Leaders</div>
+                <div class="btn second">Player Stats</div>
+                <div class="btn third">Team Stats</div>
+            </div>
+
+            <div class="mid-btns">
+                <div class="seasons">
+                    <img src="./Images/PNG/Arrowleft.png" alt="">
+                    <p>2020 - 21</p>
+                    <img src="./Images/PNG/Arrowright.png" alt="">
+                </div>
+                <div class="regular-playoff">
+                    <img src="./Images/PNG/Arrowleft.png" alt="">
+                    <p>例行賽</p>
+                    <img src="./Images/PNG/Arrowright.png" alt="">
+                </div>
+            </div>
+
+            <div class="statistic-leader">
+
+                <div class="leader" id="one">
+                    <div class="top-row">
+                        <p>場均得分</p>
+                        <p class="grey">查看更多</p>
+                    </div>
+                    <div class="mid-row">
+                        <div class="players-info">
+                            <p class="numbers">26.21</p>
+                            <p class="team">新竹街口攻城獅</p>
+                            <p class="name">Ladontae Henton</p>
+                            <p class="grey">2020 - 21<br>例行賽</p>
+                            <p class="grey">上季得分領銜 <br> 無</p>
+                        </div>
+                        <div class="players-pic">
+                            <img src="./Images/JPG/Ladontae Henton.jpg" alt="Ladontae Henton" class="img">
+                        </div>
+                    </div>
+
+
+                    <div class="bottom-row">
+                        <div class="button" data-points="26.21" data-pic="Ladontae Henton.jpg"
+                            data-name="Ladontae Henton" data-team="新竹街口攻城獅">
+                            <div class="ordinal">1</div>
+                            <div class="leaders-info">
+                                <div class="leaders-name">Ladontae<br>Henton</div>
+                                <div class="stats">26.21</div>
+                            </div>
+                        </div>
+                        <div class="button" data-points="25.67" data-pic="Davon Reed.jpg" data-name="Davon Reed"
+                            data-team="桃園領航猿">
+                            <div class="ordinal">2</div>
+                            <div class="leaders-info">
+                                <div class="leaders-name">Davon<br>Reed</div>
+                                <div class="stats">25.67</div>
+                            </div>
+                        </div>
+                        <div class="button" data-points="25.58" data-pic="Anthony Tucker.jpg" data-name="Anthony Tucker"
+                            data-team="福爾摩沙夢想家">
+                            <div class="ordinal">3</div>
+                            <div class="leaders-info">
+                                <div class="leaders-name">Anthony<br>Tucker</div>
+                                <div class="stats">25.58</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leader" id="two">
+                    <div class="top-row">
+                        <p>場均籃板</p>
+                        <p class="grey">查看更多</p>
+                    </div>
+                    <div class="mid-row">
+                        <div class="players-info">
+                            <p class="numbers">13.85</p>
+                            <p class="team">桃園領航猿</p>
+                            <p class="name">Kadeem Jack</p>
+                            <p class="grey">2020 - 21<br>例行賽</p>
+                            <p class="grey">上季籃板領銜 <br> 無</p>
+                        </div>
+                        <div class="players-pic">
+                            <img src="./Images/JPG/Kadeem Jack.jpg" alt="" class="img">
+                        </div>
+                    </div>
+
+
+                    <div class="bottom-row">
+                        <div class="button" data-rebs="13.85" data-pic="Kadeem Jack.jpg" data-team="桃園領航猿"
+                            data-name="Kadeem Jack">
+                            <div class="ordinal">1</div>
+                            <div class="leaders-info">
+                                <div class="leaders-name">Kadeem<br>Jack</div>
+                                <div class="stats">13.85</div>
+                            </div>
+                        </div>
+                        <div class="button" data-rebs="13.67" data-pic="Charles Garcia.jpg" data-team="富邦勇士"
+                            data-name="Charles Garcia">
+                            <div class="ordinal">2</div>
+                            <div class="leaders-info">
+                                <div class="leaders-name">Charles<br>Garcia</div>
+                                <div class="stats">13.67</div>
+                            </div>
+                        </div>
+                        <div class="button" data-rebs="12.79" data-pic="Ihor Zaytsev.jpg" data-team="富邦勇士"
+                            data-name="Kadeem Jack">
+                            <div class="ordinal">3</div>
+                            <div class="leaders-info">
+                                <div class="leaders-name">Ihor<br>Zaytsev</div>
+                                <div class="stats">12.79</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leader" id="three">
+                    <div class="top-row">
+                        <p>場均三分球命中率</p>
+                        <p class="grey">查看更多</p>
+                    </div>
+                    <div class="mid-row">
+                        <div class="players-info">
+                            <p class="numbers">53<span>%</span></p>
+                            <p class="team">福爾摩沙夢想家</p>
+                            <p class="name">林俊吉</p>
+                            <p class="grey">2020 - 21<br>例行賽</p>
+                            <p class="grey">上季三分球%領銜 <br> 無</p>
+                        </div>
+                        <div class="players-pic">
+                            <img src="./Images/JPG/林俊吉.jpg" alt="" class="img">
+                        </div>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="button" data-threes="53%" data-pic="林俊吉.jpg" data-team="福爾摩沙夢想家" data-name="林俊吉">
+                            <div class="ordinal">1</div>
+                            <div class="leaders-info down">
+                                <div class="leaders-name taiwanese">林俊吉</div>
+                                <div class="stats">53%</div>
+                            </div>
+                        </div>
+                        <div class="button" data-threes="43%" data-pic="Ladontae Henton.jpg" data-team="新竹街口攻城獅"
+                            data-name="Ladontae Henton">
+                            <div class="ordinal">2</div>
+                            <div class="leaders-info">
+                                <div class="leaders-name">Ladontae<br>Henton</div>
+                                <div class="stats">43%</div>
+                            </div>
+                        </div>
+                        <div class="button" data-threes="40%" data-pic="陳堅恩.jpg" data-team="新竹街口攻城獅" data-name="陳堅恩">
+                            <div class="ordinal">3</div>
+                            <div class="leaders-info down">
+                                <div class="leaders-name taiwanese">陳堅恩</div>
+                                <div class="stats">40%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leader" id="four">
+                    <div class="top-row">
+                        <p>場均抄截</p>
+                        <p class="grey">查看更多</p>
+                    </div>
+                    <div class="mid-row">
+                        <div class="players-info">
+                            <p class="numbers">3.62</p>
+                            <p class="team">福爾摩沙夢想家</p>
+                            <p class="name">Jerran Young</p>
+                            <p class="grey">2020 - 21<br>例行賽</p>
+                            <p class="grey">上季抄截領銜 <br> 無</p>
+                        </div>
+                        <div class="players-pic">
+                            <img src="./Images/JPG/Jerran Young.jpg" alt="" class="img">
+                        </div>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="button" data-stls="3.62" data-pic="Jerran Young.jpg" data-team="福爾摩沙夢想家"
+                            data-name="Jerran Young">
+                            <div class="ordinal">1</div>
+                            <div class="leaders-info">
+                                <div class="leaders-name">Jerran<br>Young</div>
+                                <div class="stats">3.62</div>
+                            </div>
+                        </div>
+                        <div class="button" data-stls="2.73" data-pic="高國豪.jpg" data-team="新竹街口攻城獅" data-name="高國豪">
+                            <div class="ordinal">2</div>
+                            <div class="leaders-info down">
+                                <div class="leaders-name taiwanese">高國豪</div>
+                                <div class="stats">2.73</div>
+                            </div>
+                        </div>
+                        <div class="button" data-stls="2.4" data-pic="Stephan Hicks.jpg" data-team="福爾摩沙夢想家"
+                            data-name="Stephan Hicks">
+                            <div class="ordinal">3</div>
+                            <div class="leaders-info">
+                                <div class="leaders-name">Stephan<br>Hicks</div>
+                                <div class="stats">2.4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-cta">
+                <div class="cta1">
+
+                    <svg class="icon-leaderboard">
+                        <use xlink:href="./icomoon/symbol-defs.svg#icon-leaderboard"></use>
+                    </svg>
+                    <p>查看更多數據</p>
+
+                </div>
+                <div class="cta2">
+
+                    <svg class="icon-play">
+                        <use xlink:href="./icomoon/symbol-defs.svg#icon-play"></use>
+                    </svg>
+                    <p>賽事回顧</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="player-shop-section">
+        <div class="container">
+            <div class="line"></div>
+            <div class="player-shop-logo">
+                <u>Players Shop</u>
+                <img src="./Images/PNG/basketball-1799781-1528760.png" alt="">
+            </div>
+            <div class="player-shop-item">
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-pic">
+                            <img src="./Images/PNG/P league短T.png" alt="">
+                        </div>
+                        <div class="item-cta">
+                            <svg class="icon-shopping-bag">
+                                <use xlink:href="./icomoon/symbol-defs.svg#icon-shopping-bag"></use>
+                            </svg>
+                            <p>經典LOGO短TEE</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-pic">
+                            <img src="./Images/JPG/P league棒球帽.jpg" alt="">
+                        </div>
+                        <div class="item-cta">
+                            <svg class="icon-shopping-bag">
+                                <use xlink:href="./icomoon/symbol-defs.svg#icon-shopping-bag"></use>
+                            </svg>
+                            <p>大 P LOGO 棒球帽</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-pic">
+                            <img src="./Images/PNG/P league 口罩.png" alt="">
+                        </div>
+                        <div class="item-cta">
+                            <svg class="icon-shopping-bag">
+                                <use xlink:href="./icomoon/symbol-defs.svg#icon-shopping-bag"></use>
+                            </svg>
+                            <p>PLUS 口罩</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item">
+                    <a href="#">
+                        <div class="item-pic">
+                            <img src="./Images/PNG/PLG灰色帽T.png" alt="">
+                        </div>
+                        <div class="item-cta">
+                            <svg class="icon-shopping-bag">
+                                <use xlink:href="./icomoon/symbol-defs.svg#icon-shopping-bag"></use>
+                            </svg>
+                            <p>PLG 圓形LOGO棉質帽T</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+            <div class="load-more-cta">
+                <a href="#">
+                    <p>LOAD MORE</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-section">
+        <div class="container">
+            <div class="white-section">
+                <ul>
+                    <li class="big">數據</li>
+                    <div class="none">
+                        <li>真實命中率</li>
+                        <li>貢獻值</li>
+                        <li>使用效率</li>
+                    </div>
+                </ul>
+                <ul>
+                    <li class="big">球隊</li>
+                    <div class="none">
+                        <li>勝 / 敗場分析</li>
+                        <li>戰績</li>
+                        <li>官方活動</li>
+                    </div>
+                </ul>
+                <ul>
+                    <li class="big">球員</li>
+                    <div class="none">
+                        <li>個人表現</li>
+                        <li>訓練營</li>
+                        <li>生涯榮譽</li>
+                    </div>
+                </ul>
+                <ul>
+                    <li class="big">周邊商品</li>
+                    <div class="none">
+                        <li>籃球鞋款</li>
+                        <li>連帽上衣</li>
+                        <li>配件</li>
+                    </div>
+                </ul>
+            </div>
+
+
+            <div class="black-section">
+                <div class="top-row">
+                    <ul>
+                        <li>加入會員</li>
+                        <li>訂閱最新消息</li>
+                        <li>傳送意見回饋</li>
+                    </ul>
+
+                    <div class="border"></div>
+
+                    <ul>
+                        <li>取得協助</li>
+                        <div class="none">
+                            <li>訂單狀態</li>
+                            <li>退貨</li>
+                        </div>
+                    </ul>
+                    <ul>
+                        <li>關於Players</li>
+                        <div class="none">
+                            <li>最新消息</li>
+                            <li>職涯發展</li>
+                        </div>
+                    </ul>
+                </div>
+                <ul class="flexbox">
+                    <li>
+                        <svg class="icon-twitter">
+                            <use xlink:href="./icomoon/symbol-defs.svg#icon-twitter"></use>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg class="icon-instagram">
+                            <use xlink:href="./icomoon/symbol-defs.svg#icon-instagram"></use>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg class="icon-facebook">
+                            <use xlink:href="./icomoon/symbol-defs.svg#icon-facebook"></use>
+                        </svg>
+                    </li>
+                    <li>
+                        <svg class="icon-youtube">
+                            <use xlink:href="./icomoon/symbol-defs.svg#icon-youtube"></use>
+                        </svg>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="border2 none"></div>
+
+            <div class="bottom-row none">
+                <div class="basketball-logo">
+                    <u>Players</u>
+                    <img src="./Images/PNG/basketball-1799781-1528760.png" alt="">
+                </div>
+                <p><span>Players</span> 106 台北市大安區復興南路一段390號2樓 (02-6631-6666)</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+    <script src="./JS/Mid-Seminar.js"></script>
+</body>
+
+</html>

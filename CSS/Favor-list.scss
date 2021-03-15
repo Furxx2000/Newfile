@@ -1,0 +1,755 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
+
+
+:root {
+    --primary-color: #e5e5e5;
+    --secondary-color: #f5f5f5;
+    --third-color: #bfbfbf;
+    --fourth-color: #3b3b3b;
+    --fifth-color: #9a9a9a;
+    --sixth-color: #FCDB36;
+    --seventh-color: #fe6c6c;
+    --eighth-color: #131313;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+
+.flickity-viewport {
+    cursor: default !important;
+}
+
+.navbar{
+
+    .grey-top {
+        display: none;
+    }
+
+    .white-mid {
+        display: flex;
+        padding: 1rem .9rem 1rem 1.5rem;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        background-color: white;
+        transition: .5s;
+        align-items: center;
+
+        .left-col {
+            position: relative;
+            z-index: 1;
+
+            a:hover {
+                opacity: .7;
+            }
+
+            a {
+                color:black;
+                font-size: 1.8rem;
+                font-family: 'Poppins';
+                font-weight: 800;
+            }
+
+            img {
+                position: absolute;
+                top: .75rem;
+                left: 1.9rem;
+                width: 12px;
+            }
+        }
+
+        .mid-col {
+            display: none;
+        }
+
+        .right-col {
+            display: flex;
+
+            .heart, .search-input, .icon-search {
+                display: none;
+            }
+
+            svg {
+                width: 1.5rem;
+                height: 1.5rem;
+                vertical-align: middle;
+            }
+
+            .shopping-bag, .search2 {
+                padding: .5rem;
+                border-radius: 50%;
+            }
+
+            .hamburger {
+                position: relative;
+                z-index: 1002;
+                display: flex;
+                transition: .2s ease-in-out .8s;
+
+                #check {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    z-index: 90000;
+                    cursor: pointer;
+                    opacity: 0;
+                }
+
+                #check:checked ~ .hamburger-menu-container
+                .hamburger-menu div{ 
+                    background-color: transparent;
+                }
+
+                #check:checked ~ .hamburger-menu-container
+                .hamburger-menu div:before{
+                    transform: translateY(0) rotate(-45deg);
+                }
+
+                #check:checked ~ .hamburger-menu-container
+                .hamburger-menu div:after{
+                    transform: translateY(0) rotate(45deg);
+                }
+
+                .hamburger-menu-container {
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    
+
+                    .hamburger-menu {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        div {
+                            width: 1.5rem;
+                            height: 3px;
+                            border-radius: .5rem;
+                            background-color: black;
+                            position: relative;
+                            z-index: 1001;
+                            transition: .5s;
+                        }
+
+                        div:before, div:after {
+                            content:'';
+                            position: absolute;
+                            width: inherit;
+                            height: inherit;
+                            background-color: black;
+                            border-radius: .5rem;
+                            transition: .5s;
+                        }
+                        div:before {
+                            transform: translateY(-8px);
+                        }
+                        div:after {
+                            transform: translateY(8px);
+                        }
+                    }
+                }
+            }
+
+            .hamburger:hover {
+                background-color: var(--primary-color);
+                border-radius: 50%;
+            }
+
+            .shopping-bag:hover, .search2:hover {
+                text-align: center;
+                background-color: var(--primary-color);
+                transition: .25s ease-in-out;
+            }
+
+            a {
+                text-decoration: none;    
+            }
+
+            nav.menu-btn {
+                transform: translateX(0%);
+            }
+
+            .hamburger.move {
+                transform: translateX(-210px);
+            }
+        }
+    }
+
+    .grey-bottom {
+        background-color: var(--secondary-color);
+        text-align: center;
+        padding: .6rem 0;
+        
+        p {
+            margin: .3rem;
+            font-family: "Noto Sans TC";
+        }
+    }
+}
+
+section.favorite-section {
+    margin-bottom: 12rem;
+    .container {
+        padding: 0 .5rem;
+
+        .title-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: .5rem .5rem;
+
+            p {
+                margin: 0;
+                padding: 0;
+            }
+
+            .header {
+                p {
+                    font-size: 1.3rem;
+                    font-family: 'Noto Sans TC';
+                }
+            }
+
+            .edit {
+                border: 1.5px solid #ccc;
+                border-radius: 1.3rem;
+                padding: .8rem 1.4rem;
+                transition: .25s ease-in-out;
+                cursor: pointer;
+
+                p {
+                    font-size: .9rem;
+                }
+            }
+
+            .edit:hover {
+                border: 1.5px solid var(--fifth-color);
+            }
+        }
+
+        .items-section {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .item {
+                width: 48%;
+                margin-bottom: 1.5rem;
+
+                .item-img {
+                    max-width: 100%;
+                    cursor: pointer;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .item-info {
+                    .item-name {
+                        .poppins {
+                            font-family: 'Airbnb Cereal App';
+                            font-size: .9rem;
+                            line-height: 1.5;
+                            margin: .5rem
+                        }
+
+                        .grey {
+                            font-family: 'Noto Sans TC';
+                            color: var(--fifth-color);
+                            font-weight: light;
+                            font-size: .9rem;
+                            margin: .5rem;
+                        }
+                    }
+
+                    .item-price {
+                        margin: .5rem;
+                        font-family: 'Airbnb Cereal App';
+                    }
+                }
+
+                .select-size-cta {
+                    border: 1px solid #ccc;
+                    width: fit-content;
+                    border-radius: 2rem;
+                    padding: .8rem 1.2rem;
+                    margin: 1.5rem 0 0 .5rem;
+                    font-family: 'Airbnb Cereal App';
+                    cursor: pointer;
+                }
+
+                .select-size-cta:hover {
+                    border: 1px solid var(--fifth-color);
+                }
+            }
+        }
+    }
+}
+
+section.footer-section {
+
+    .none {
+        display: none;
+    }
+
+    .white-section {
+
+        li {
+            margin-bottom: 1.5rem;
+            font-family: 'Noto Sans TC';
+        }
+    }
+
+    .black-section {
+        background-color: var(--eighth-color);
+        height: 400px;
+
+        .top-row {
+
+            .border {
+                margin: 0 auto;
+                width: 90%;
+                border: 1px solid var(--fourth-color);
+            }
+
+            ul {
+                padding: 1.5rem 2.5rem 0 2.5rem;
+
+                li {
+                    color: white;
+                    margin-bottom: 1rem;
+                    font-family: 'Noto Sans TC';
+                    font-size: .8rem;
+                    cursor: pointer;
+                    transition: .25s ease-in-out;
+                }
+            } 
+        }
+        .flexbox {
+            display: flex;
+            align-items:flex-start;
+            margin: 3rem 0;
+
+            li {
+               margin-right: 1rem;
+               padding: .4rem;
+               background-color: var(--fifth-color);
+               border-radius: 50%;
+               transition: .2s ease-in-out;
+               cursor: pointer;
+
+                svg {
+                    fill: var(--eighth-color);
+                    width: 1.2rem;
+                    height: 1.2rem;
+                    vertical-align: middle;
+                }
+            }
+
+            li:hover {
+                background-color: white;
+            }
+        }
+    }
+}
+
+nav {
+    position: fixed;
+    z-index: 999;
+    transform: translateX(100%);
+    width: 80%;
+    right: 0;
+    top: 0;
+    background-color:white;
+    height: 200vh;
+    padding: 2rem ;
+    transition: .2s ease-in-out .8s;
+
+    .flexbox {
+        display: flex;
+        justify-content: space-between;        
+
+        ul {
+            padding: 0;
+            margin-top: 2rem;
+
+            li {
+                font-family: 'Noto Sans TC';
+                margin-bottom: 1.5rem;
+                font-size: 1.5rem;
+                font-weight: 500;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+
+        ul:first-child {
+            width: 100%;
+
+            li:first-child{
+                display: flex;
+                align-items: center;
+                margin: 1rem 0 3rem 0;
+                justify-content: space-between;
+                
+                .user-image {
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 1rem;
+        
+                    img {
+                        max-width: 100%;
+                        border-radius: 5rem;
+                    }
+                }
+                p{
+                    padding: 0;
+                    margin-left: -3rem;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    font-family: 'Poppins';
+
+                    span {
+                        font-family: 'Noto Sans TC';
+                    }
+                }
+            }
+        }
+    }
+
+    .mobile-logo {
+        position: relative;
+        font-size: 1.5rem;
+        font-family: 'Poppins';
+        font-weight: 800;
+        width: 300px;
+        margin-bottom: 7rem;
+
+        img {
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            top: 11px;
+            left: 25px;
+        }
+    }
+
+    .bottom {
+        
+        .flex {
+            display: flex;
+            align-items: center;
+            font-family: 'Noto Sans TC';
+            font-size: 1.1rem;
+
+            .icon-shopping-bag, .icon-archive, .icon-help-circle, .icon-heart {
+                margin: 0;
+                cursor: pointer;
+            }
+
+            p {
+                margin-left: 1rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+#overlay {
+    position: fixed;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transition: .5s ease-in-out 2s;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+    -o-backdrop-filter: blur(5px);
+    -ms-backdrop-filter: blur(5px);
+    // background-color: rgba(0, 0, 0, 0.12);
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+    nav {
+        width: 40%;
+    }
+    .hamburger.move {
+        transform: translateX(-220px)!important;
+    }
+    section.footer-section {
+  
+        .black-section {
+            display: flex;
+            justify-content: space-between;
+            height: 200px;
+
+            .top-row {
+                display: flex;
+
+                .border {
+                    display: none;
+                }
+                ul {
+                    padding: 0;
+                    margin: 2rem 3rem;
+
+                    .none {
+                        display: block;
+
+                        li {
+                            color: var(--fifth-color);
+                        }
+
+                        li:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .flexbox {
+                padding: 1.8rem 1.5rem 0 0;
+                margin: 0;
+            }
+        }
+        .border2 {
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            border: 1px solid var(--fourth-color);
+            position: relative;
+            z-index: 99;
+        }
+
+        .bottom-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--eighth-color);
+            padding: 1rem;
+            margin-top: -2px;
+
+            .basketball-logo {
+                position: relative;
+                color: white;
+                font-family: 'Poppins';
+                font-weight: 800;
+                font-size: 2rem;
+
+                img {
+                    position: absolute;
+                    top: 14px;
+                    left: 33px;
+                    width: 13px;
+                    height: 13px;
+                }               
+            }
+
+            p {
+                color: var(--fifth-color);
+                font-family: 'Noto Sans TC';
+                font-size: .8rem;
+
+                span {
+                    font-family: 'Poppins';
+                    margin: 0 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    
+    .navbar {
+        .grey-top {
+            display: block;
+            background-color: var(--secondary-color);
+            text-align: right;
+            padding: .1rem 2.4rem;
+
+            .flexbox {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 0 1rem;
+    
+                .user-image {
+                    width: 25px;
+                    margin: 0 .5rem;
+                    cursor: pointer;
+                    
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+
+                span {
+                    font-family: 'Noto Sans TC';
+                    font-size: .9rem;
+                    margin: 0 .2rem;
+                    cursor: pointer;
+                }
+            }   
+        }
+
+        .white-mid {
+            padding: 1rem 2.9rem 1rem 3.3rem;
+
+            .mid-col {
+                display: flex;
+                padding-left: 9rem;
+                align-items: center;
+                height: 100%;
+
+                div{
+                    border: 2px solid white;
+                    margin: 0 1rem;
+                    transition: .25s ease-in-out;
+                }
+
+                div:hover {
+                    border-bottom: 2px solid black;
+                }
+
+                a {
+                    font-family: 'Noto Sans TC';
+                    font-size: 1.2rem;
+                }
+            }
+
+            .right-col {             
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                .search2, .hamburger {
+                    display: none;
+                }
+                
+                .icon-search, .search-input {
+                    display: inline-block;
+                    transition: .25s ease-in-out;
+                }
+
+                .search-input:hover {
+                    background-color: var(--primary-color);
+                }
+
+                .heart, .search {
+                    display: block;
+                    padding: .5rem;
+                    height: fit-content;
+                    margin-left: 1.5rem;
+                    border-radius: 50%;
+                }
+
+                .heart:hover, .search:hover {
+                    transition: .25s ease-in-out;
+                    background-color: var(--primary-color);
+                }
+
+                .shopping-bag {
+                    margin-left: 1rem;
+                    border-radius: 50%;
+                }
+
+                .search {
+                    position: absolute;
+                    top: 1px;
+                    left: -22px;
+                }
+
+                ::-webkit-input-placeholder {color: #d6d6d6;}
+
+                .search-input {
+                    background-color: var(--secondary-color);
+                    border-radius: 3rem;
+                    border: none;
+                    width: 180px;
+                    font-family: 'Noto Sans TC';
+                    font-weight: 400;
+                    font-size: 1.2rem;
+                    padding: .5rem 0 .6rem 3.2rem;
+                    vertical-align: middle;
+                    outline:none;
+                }
+            }
+        }
+    }
+
+    section.favorite-section {
+        margin-top: 2rem;
+
+        .container{
+            padding: 0 3rem; 
+
+            .title-section {
+                margin-bottom: 3rem;
+
+                .header {
+                    p {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+
+            .items-section {
+                .item {
+                    width: 31%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    section.footer-section {
+        .black-section {
+            padding: 0 15%;
+
+            .flexbox {
+                padding-right: 1rem;
+            }
+        }
+
+        .border2 {
+            width: 63%;
+        }
+    }
+}
