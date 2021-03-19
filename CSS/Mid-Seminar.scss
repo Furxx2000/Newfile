@@ -1,1789 +1,1742 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap");
 
 :root {
-    --primary-color: #e5e5e5;
-    --secondary-color: #f5f5f5;
-    --third-color: #bfbfbf;
-    --fourth-color: #3b3b3b;
-    --fifth-color: #9a9a9a;
-    --sixth-color: #FCDB36;
-    --seventh-color: #fe6c6c;
-    --eighth-color: #131313;
+  --primary-color: #e5e5e5;
+  --secondary-color: #f5f5f5;
+  --third-color: #bfbfbf;
+  --fourth-color: #3b3b3b;
+  --fifth-color: #9a9a9a;
+  --sixth-color: #fcdb36;
+  --seventh-color: #fe6c6c;
+  --eighth-color: #131313;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
-
 
 .flickity-viewport {
-    cursor: default !important;
+  cursor: default !important;
 }
 
-.navbar{
+.navbar {
+  .grey-top {
+    display: none;
+  }
 
-    .grey-top {
+  .white-mid {
+    display: flex;
+    padding: 1rem 0.9rem 1rem 1.5rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: white;
+    transition: 0.5s;
+    align-items: center;
+
+    .left-col {
+      position: relative;
+      z-index: 1;
+
+      a:hover {
+        opacity: 0.7;
+      }
+
+      a {
+        color: black;
+        font-size: 1.8rem;
+        font-family: "Poppins";
+        font-weight: 800;
+      }
+
+      img {
+        position: absolute;
+        top: 0.75rem;
+        left: 1.9rem;
+        width: 12px;
+      }
+    }
+
+    .mid-col {
+      display: none;
+    }
+
+    .right-col {
+      display: flex;
+
+      .heart,
+      .search-input,
+      .icon-search {
         display: none;
-    }
+      }
 
-    .white-mid {
+      svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        vertical-align: middle;
+      }
+
+      .shopping-bag,
+      .search2 {
+        padding: 0.5rem;
+        border-radius: 50%;
+      }
+
+      .hamburger {
+        position: relative;
+        z-index: 1002;
         display: flex;
-        padding: 1rem .9rem 1rem 1.5rem;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        background-color: white;
-        transition: .5s;
-        align-items: center;
+        transition: 0.2s ease-in-out 0.8s;
 
-        .left-col {
-            position: relative;
-            z-index: 1;
-
-            a:hover {
-                opacity: .7;
-            }
-
-            a {
-                color:black;
-                font-size: 1.8rem;
-                font-family: 'Poppins';
-                font-weight: 800;
-            }
-
-            img {
-                position: absolute;
-                top: .75rem;
-                left: 1.9rem;
-                width: 12px;
-            }
+        #check {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 2.5rem;
+          height: 2.5rem;
+          z-index: 90000;
+          cursor: pointer;
+          opacity: 0;
         }
 
-        .mid-col {
-            display: none;
+        #check:checked ~ .hamburger-menu-container .hamburger-menu div {
+          background-color: transparent;
         }
 
-        .right-col {
+        #check:checked ~ .hamburger-menu-container .hamburger-menu div:before {
+          transform: translateY(0) rotate(-45deg);
+        }
+
+        #check:checked ~ .hamburger-menu-container .hamburger-menu div:after {
+          transform: translateY(0) rotate(45deg);
+        }
+
+        .hamburger-menu-container {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          .hamburger-menu {
+            width: 2.5rem;
+            height: 2.5rem;
             display: flex;
+            align-items: center;
+            justify-content: center;
 
-            .heart, .search-input, .icon-search {
-                display: none;
+            div {
+              width: 1.5rem;
+              height: 3px;
+              border-radius: 0.5rem;
+              background-color: black;
+              position: relative;
+              z-index: 1001;
+              transition: 0.5s;
             }
 
-            svg {
-                width: 1.5rem;
-                height: 1.5rem;
-                vertical-align: middle;
+            div:before,
+            div:after {
+              content: "";
+              position: absolute;
+              width: inherit;
+              height: inherit;
+              background-color: black;
+              border-radius: 0.5rem;
+              transition: 0.5s;
             }
-
-            .shopping-bag, .search2 {
-                padding: .5rem;
-                border-radius: 50%;
+            div:before {
+              transform: translateY(-8px);
             }
-
-            .hamburger {
-                position: relative;
-                z-index: 1002;
-                display: flex;
-                transition: .2s ease-in-out .8s;
-
-                #check {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    width: 2.5rem;
-                    height: 2.5rem;
-                    z-index: 90000;
-                    cursor: pointer;
-                    opacity: 0;
-                }
-
-                #check:checked ~ .hamburger-menu-container
-                .hamburger-menu div{ 
-                    background-color: transparent;
-                }
-
-                #check:checked ~ .hamburger-menu-container
-                .hamburger-menu div:before{
-                    transform: translateY(0) rotate(-45deg);
-                }
-
-                #check:checked ~ .hamburger-menu-container
-                .hamburger-menu div:after{
-                    transform: translateY(0) rotate(45deg);
-                }
-
-                .hamburger-menu-container {
-                    flex: 1;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-end;
-                    
-
-                    .hamburger-menu {
-                        width: 2.5rem;
-                        height: 2.5rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-
-                        div {
-                            width: 1.5rem;
-                            height: 3px;
-                            border-radius: .5rem;
-                            background-color: black;
-                            position: relative;
-                            z-index: 1001;
-                            transition: .5s;
-                        }
-
-                        div:before, div:after {
-                            content:'';
-                            position: absolute;
-                            width: inherit;
-                            height: inherit;
-                            background-color: black;
-                            border-radius: .5rem;
-                            transition: .5s;
-                        }
-                        div:before {
-                            transform: translateY(-8px);
-                        }
-                        div:after {
-                            transform: translateY(8px);
-                        }
-                    }
-                }
+            div:after {
+              transform: translateY(8px);
             }
-
-            .hamburger:hover {
-                background-color: var(--primary-color);
-                border-radius: 50%;
-            }
-
-            .shopping-bag:hover, .search2:hover {
-                text-align: center;
-                background-color: var(--primary-color);
-                transition: .25s ease-in-out;
-            }
-
-            a {
-                text-decoration: none;    
-            }
-
-            nav.menu-btn {
-                transform: translateX(0%);
-            }
-
-            .hamburger.move {
-                transform: translateX(-210px);
-            }
+          }
         }
-    }
+      }
 
-    .grey-bottom {
-        background-color: var(--secondary-color);
+      .hamburger:hover {
+        background-color: var(--primary-color);
+        border-radius: 50%;
+      }
+
+      .shopping-bag:hover,
+      .search2:hover {
         text-align: center;
-        padding: .6rem 0;
-        
-        p {
-            margin: .3rem;
-            font-family: "Noto Sans TC";
-        }
+        background-color: var(--primary-color);
+        transition: 0.25s ease-in-out;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      nav.menu-btn {
+        transform: translateX(0%);
+      }
+
+      .hamburger.move {
+        transform: translateX(-210px);
+      }
     }
+  }
+
+  .grey-bottom {
+    background-color: var(--secondary-color);
+    text-align: center;
+    padding: 0.6rem 0;
+
+    p {
+      margin: 0.3rem;
+      font-family: "Noto Sans TC";
+    }
+  }
 }
 
 .feedback-cta {
-    position: fixed;
-    z-index: 999;
-    top: 45vh;
-    right: 0;
-    background-color: var(--sixth-color);
-    width: fit-content;
-    color: black;
-    border-radius: .3rem;
-    writing-mode: vertical-lr;
-    padding: .7rem .7rem .7rem .6rem;
-    text-align: center;
-    font-family: 'Noto Sans TC';
-    font-size: .8rem;
-    letter-spacing: .3rem;
+  position: fixed;
+  z-index: 999;
+  top: 45vh;
+  right: 0;
+  background-color: var(--sixth-color);
+  width: fit-content;
+  color: black;
+  border-radius: 0.3rem;
+  writing-mode: vertical-lr;
+  padding: 0.7rem 0.7rem 0.7rem 0.6rem;
+  text-align: center;
+  font-family: "Noto Sans TC";
+  font-size: 0.8rem;
+  letter-spacing: 0.3rem;
 }
 
-
 section.hero-section {
+  .container {
+    padding: 0 1.4rem;
 
-    .container {
-        padding: 0 1.4rem;
-
-        .banner-mobile {
-            background-image: url(../Images/PNG/Background-image.jpg);
-            height: 40rem;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .h1-ipad {
-            display: none;
-        }
-
-        .banner-ipad-pc {
-            display: none;
-        }
-
-        h1 {
-            font-family: 'Poppins';
-            font-size: 3.2rem;
-            font-weight: 800;
-            line-height: 1.6;
-            margin-bottom: .5rem;
-        }
-
-        p {
-            font-size: .9rem;
-            font-family: "Noto Sans TC";
-            font-weight: 500;
-            margin: 0;
-        }
-
-        button.hero-cta {
-            border: none;
-            border-radius: 10rem;
-            width: fit-content;
-            background-color: var(--sixth-color);
-            padding: .8rem 1.2rem;
-            font-size: 1rem;
-            font-family: 'Noto Sans TC';
-            margin-top: 1rem;
-            cursor: pointer;
-        }
-
-        .hero-cta:hover {
-            opacity: .8;
-        }
+    .banner-mobile {
+      background-image: url(../Images/PNG/Background-image.jpg);
+      height: 40rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
+
+    .h1-ipad {
+      display: none;
+    }
+
+    .banner-ipad-pc {
+      display: none;
+    }
+
+    h1 {
+      font-family: "Poppins";
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+      font-family: "Noto Sans TC";
+      font-weight: 500;
+      margin: 0;
+    }
+
+    button.hero-cta {
+      border: none;
+      border-radius: 10rem;
+      width: fit-content;
+      background-color: var(--sixth-color);
+      padding: 0.8rem 1.2rem;
+      font-size: 1rem;
+      font-family: "Noto Sans TC";
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    .hero-cta:hover {
+      opacity: 0.8;
+    }
+  }
 }
 
 section.data-section {
+  margin: 4rem 0;
 
-    margin: 4rem 0;
-
-    .container {
+  .container {
     padding: 0 1.5rem;
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-            min-height: 100vh;
-            grid-gap: 2rem;
-        }
-        
-        .img-container {
-            overflow: hidden;
-        }
-        
-        .img-container img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: all .3s ease-out;
-            cursor: pointer;
-        }
-        
-        .img-container img:hover{
-            transform: scale(1.2);
-        }
-        
-        .modal {
-            background: rgba(0, 0, 0, 0.8);
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            pointer-events: none;
-            transition: .25s ease-out;
-        }
-        
-        .modal.open {
-            opacity: 1;
-            pointer-events: all;
-        }
-        
-        .full-img {
-            position: absolute;
-            height: 70%;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0.5);
-            transition: all 0.25s ease-out;
-        }
-        
-        .full-img.open {
-            transform: translate(-50%, -50%) scale(1);
-        }
-        
-        .modal p {
-            color: white;
-            font-size: 2rem;
-            position: absolute;
-            bottom: 5%;
-            left: 50%;
-            transform: translate(-50%, -5%);
-        }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      min-height: 100vh;
+      grid-gap: 2rem;
     }
-    
+
+    .img-container {
+      overflow: hidden;
+    }
+
+    .img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s ease-out;
+      cursor: pointer;
+    }
+
+    .img-container img:hover {
+      transform: scale(1.2);
+    }
+
+    .modal {
+      background: rgba(0, 0, 0, 0.8);
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      pointer-events: none;
+      transition: 0.25s ease-out;
+    }
+
+    .modal.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .full-img {
+      position: absolute;
+      height: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.5);
+      transition: all 0.25s ease-out;
+    }
+
+    .full-img.open {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .modal p {
+      color: white;
+      font-size: 2rem;
+      position: absolute;
+      bottom: 5%;
+      left: 50%;
+      transform: translate(-50%, -5%);
+    }
+  }
 }
 
 section.game-schedule-section {
+  .two {
+    display: none;
+  }
 
-    .two {
-        display: none;
+  .three {
+    display: none;
+  }
+
+  .main-carousel {
+    .flickity-page-dots {
+      display: none;
     }
 
-    .three {
-        display: none;
+    .flickity-prev-next-button {
+      display: none;
     }
+  }
 
-    .main-carousel {
+  .game-schedule-text {
+    font-size: 1.3rem;
+    font-family: "Noto Sans TC";
+    font-weight: 500;
+    margin: 1.5rem;
+  }
 
-        .flickity-page-dots {
-            display: none;
+  .game {
+    border-radius: 0.5rem;
+    margin: 0 auto;
+    width: 90%;
+    height: 160px;
+    box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.12);
+    margin-bottom: 2rem;
+    cursor: pointer;
+
+    .topbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120px;
+
+      .left-box {
+        padding-top: 0.5rem;
+
+        .team-pic {
+          padding-left: 1rem;
         }
 
-        .flickity-prev-next-button {
-            display: none;
+        .team-name {
+          font-size: 0.5rem;
+          font-family: "Noto Sans TC";
+          text-align: center;
         }
+      }
+
+      .mid-box {
+        text-align: center;
+        font-size: 0.5rem;
+        margin: 0;
+
+        .game-date {
+          font-family: "Oswald";
+          margin: 0 0;
+        }
+
+        .game-number {
+          font-weight: 800;
+          font-family: "Airbnb Cereal App";
+        }
+
+        .game-location {
+          font-family: "Noto Sans TC";
+        }
+
+        .game-scoreboard {
+          font-family: "Oswald";
+          font-weight: 500;
+          font-size: 1.5rem;
+        }
+
+        .game-stats {
+          color: var(--third-color);
+          font-size: 1.2rem;
+          font-family: "Noto Sans TC";
+        }
+      }
+
+      .right-box {
+        padding-top: 0.5rem;
+
+        .team-pic {
+          padding-left: 1rem;
+        }
+
+        .team-name {
+          font-size: 0.5rem;
+          font-family: "Noto Sans TC";
+          text-align: center;
+        }
+      }
     }
 
-    .game-schedule-text {
-        font-size: 1.3rem;
-        font-family: 'Noto Sans TC';
+    .bottombox {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      border-top: 1px solid var(--primary-color);
+      border-radius: 0 0 0.5rem 0.5rem;
+      justify-content: center;
+      padding: 0.5rem;
+
+      .ball-pic {
+        width: 25px;
+        height: fit-content;
+        margin-right: 0.5rem;
+
+        img {
+          width: 100%;
+          vertical-align: middle;
+        }
+      }
+
+      p {
+        font-family: "Noto Sans TC";
         font-weight: 500;
-        margin: 1.5rem;
+        letter-spacing: 0.2rem;
+        margin: 0;
+        color: black;
+      }
     }
-
-    .game {
-        border-radius: .5rem;
-        margin: 0 auto;
-        width: 90%;
-        height: 160px;
-        box-shadow: 0 .4rem .5rem rgba(0, 0, 0, 0.12);
-        margin-bottom: 2rem;
-        cursor: pointer;
-
-        .topbox {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 120px;
-
-            .left-box {
-                padding-top: .5rem;
-
-                .team-pic {
-                    padding-left: 1rem;
-                }
-
-                .team-name {
-                    font-size: .5rem;
-                    font-family: 'Noto Sans TC';
-                    text-align: center;
-                }
-            }
-
-            .mid-box {
-                text-align: center;
-                font-size: .5rem;
-                margin: 0;
-
-                .game-date {
-                    font-family: 'Oswald';
-                    margin: 0 0;
-                }
-
-                .game-number {
-                    font-weight: 800;
-                    font-family: 'Airbnb Cereal App';
-                }
-
-                .game-location {
-                    font-family: 'Noto Sans TC';
-                }
-
-                .game-scoreboard {
-                    font-family: 'Oswald';
-                    font-weight: 500;
-                    font-size: 1.5rem;
-                }
-
-                .game-stats {
-                    color: var(--third-color);
-                    font-size: 1.2rem;
-                    font-family: 'Noto Sans TC';
-                }
-            }
-
-            .right-box {
-                padding-top: .5rem;
-
-
-                .team-pic {
-                    padding-left: 1rem;
-                }
-
-                .team-name {
-                    font-size: .5rem;
-                    font-family: 'Noto Sans TC';
-                    text-align: center;
-                }
-            }
-        }
-
-        .bottombox {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            border-top: 1px solid var(--primary-color);
-            border-radius: 0 0 .5rem .5rem;
-            justify-content: center;
-            padding: .5rem;
-      
-            .ball-pic {
-                width: 25px;
-                height: fit-content;
-                margin-right: .5rem;
-
-                img {
-                    width: 100%;
-                    vertical-align: middle;
-                }
-            }
-
-            p {
-                font-family: 'Noto Sans TC';
-                font-weight: 500;
-                letter-spacing: .2rem;
-                margin:0;
-                color: black;
-
-            }
-        }
-        .commute {
-            background-color: var(--sixth-color);
-        }
+    .commute {
+      background-color: var(--sixth-color);
     }
+  }
 }
 
 section.team-stats-section {
+  .two {
+    display: none;
+  }
 
-    .two {
-        display: none;
+  .three {
+    display: none;
+  }
+
+  .header-section {
+    margin: 2rem;
+
+    .header-text {
+      font-size: 1.2rem;
+      font-family: "Noto Sans TC";
+      font-weight: 500;
     }
 
-    .three {
-        display: none;
+    .color-reminder {
+      margin-top: 2rem;
+
+      .yellow-best {
+        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+      }
+
+      .red-worst {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .team-stats {
+    .down {
+      margin-top: 0.3rem;
     }
 
-    .header-section {
-        margin: 2rem;
-
-        .header-text {
-            font-size: 1.2rem;
-            font-family: 'Noto Sans TC';
-            font-weight: 500;
-        }
-
-        .color-reminder {
-            margin-top: 2rem;
-
-            .yellow-best {
-                margin-bottom: .5rem;
-                font-size: .8rem;
-            }
-
-            .red-worst {
-                font-size: .8rem;
-            }
-        }
+    .flickity-page-dots {
+      display: none;
     }
 
-    .team-stats {
+    .top-logo {
+      text-align: center;
 
-        .down {
-            margin-top: .3rem;
+      p {
+        font-family: "Oswald";
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin: 0;
+        letter-spacing: 0.1rem;
+
+        span {
+          margin: 0 1rem;
         }
+      }
 
-        .flickity-page-dots {
-            display: none;
-        }
-
-        .top-logo {
-            text-align: center;
-
-            p {
-                font-family: 'Oswald';
-                font-size: 1.2rem;
-                font-weight: 800;
-                margin: 0;
-                letter-spacing: .1rem;
-
-                span {
-                    margin: 0 1rem;
-                }
-            }
-
-            .up {
-                margin-top: -1rem;
-            }
-        }
-
-        .bottom-stats {
-            background-color: var(--primary-color);
-            width: 250px;
-            height: 260px;
-            margin: .5rem auto;
-            border-radius: .3rem;
-
-            .statictis {
-                padding-top: 3%;
-
-                ul {
-                    display: flex;
-                    justify-content: space-around;
-                    background-color:white;
-                    width: 71%;
-                    margin: .4rem auto;
-                    border-radius: 5rem;
-                    padding: .5rem;
-
-                    .text {
-                        font-family: 'Noto Sans TC';
-                        font-size: .8rem;
-                        font-weight: 400;
-                        line-height: 2;
-                        margin: 0;
-                    }
-
-                    .number {
-                        font-size: 1.3rem;
-                        font-family: 'Oswald';
-                    }
-
-                    .best {
-                        color: var(--sixth-color);
-                    }
-
-                    .worst {
-                        color: var(--seventh-color);
-                    }
-                }
-            }
-        }
+      .up {
+        margin-top: -1rem;
+      }
     }
+
+    .bottom-stats {
+      background-color: var(--primary-color);
+      width: 250px;
+      height: 260px;
+      margin: 0.5rem auto;
+      border-radius: 0.3rem;
+
+      .statictis {
+        padding-top: 3%;
+
+        ul {
+          display: flex;
+          justify-content: space-around;
+          background-color: white;
+          width: 71%;
+          margin: 0.4rem auto;
+          border-radius: 5rem;
+          padding: 0.5rem;
+
+          .text {
+            font-family: "Noto Sans TC";
+            font-size: 0.8rem;
+            font-weight: 400;
+            line-height: 2;
+            margin: 0;
+          }
+
+          .number {
+            font-size: 1.3rem;
+            font-family: "Oswald";
+          }
+
+          .best {
+            color: var(--sixth-color);
+          }
+
+          .worst {
+            color: var(--seventh-color);
+          }
+        }
+      }
+    }
+  }
 }
 
 section.subscribe-section {
-    margin: 4rem 0;
+  margin: 4rem 0;
 
-    .container {
-        display: flex;
-        background-color: var(--secondary-color);
-        height: 4rem;
-        justify-content: center;
-        align-items: center;
+  .container {
+    display: flex;
+    background-color: var(--secondary-color);
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
 
-        .logo-section {
-            
-            .left {
-                display: none;
-            }
-        }
-
-        .email-input {
-            display: flex;
-            justify-content: center;
-        }
-
-        .email-cta {
-            width: 230px;
-
-            .email {
-                border: none;
-                font-family: 'Poppins';
-                font-size: .6rem;
-                font-weight: 500;
-                width: 100%;
-                height: 2rem;
-                background-color: var(--primary-color);
-                border-radius: 2rem 0 0 2rem ;
-                padding-left: 1rem;
-                padding-top: .1rem;
-                outline: 0;
-                
-            }
-
-            .email:hover {
-                background-color: var(--third-color);
-                color: var(--fifth-color);
-            }
-
-            ::placeholder {
-                color: black;
-            }
-        }
-
-        .subscribe-btn {
-            width: 100px;
-            height: 2rem;
-            font-size: .7rem;
-            font-weight: 500;
-            font-family: 'Noto Sans TC';
-            border: none;
-            background-color: white;
-            border-radius: 0 2rem 2rem 0;
-            padding: 0 1rem;
-            outline: none;
-            cursor: pointer;
-
-            p {
-                line-height: 0;
-                letter-spacing: .5rem;
-            }
-
-            .icon-mail {
-                display: none;
-            }
-        }
-
-        .subscribe-btn:hover {
-            background-color: var(--sixth-color);
-            transition: .3s ease-in-out;
-        }
+    .logo-section {
+      .left {
+        display: none;
+      }
     }
+
+    .email-input {
+      display: flex;
+      justify-content: center;
+    }
+
+    .email-cta {
+      width: 230px;
+
+      .email {
+        border: none;
+        font-family: "Poppins";
+        font-size: 0.6rem;
+        font-weight: 500;
+        width: 100%;
+        height: 2rem;
+        background-color: var(--primary-color);
+        border-radius: 2rem 0 0 2rem;
+        padding-left: 1rem;
+        padding-top: 0.1rem;
+        outline: 0;
+      }
+
+      .email:hover {
+        background-color: var(--third-color);
+        color: var(--fifth-color);
+      }
+
+      ::placeholder {
+        color: black;
+      }
+    }
+
+    .subscribe-btn {
+      width: 100px;
+      height: 2rem;
+      font-size: 0.7rem;
+      font-weight: 500;
+      font-family: "Noto Sans TC";
+      border: none;
+      background-color: white;
+      border-radius: 0 2rem 2rem 0;
+      padding: 0 1rem;
+      outline: none;
+      cursor: pointer;
+
+      p {
+        line-height: 0;
+        letter-spacing: 0.5rem;
+      }
+
+      .icon-mail {
+        display: none;
+      }
+    }
+
+    .subscribe-btn:hover {
+      background-color: var(--sixth-color);
+      transition: 0.3s ease-in-out;
+    }
+  }
 }
 
 section.statistic-section {
+  .top-btns {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    background-color: var(--secondary-color);
+    font-size: 0.6rem;
+    font-family: "Poppins";
 
-    .top-btns {
-        margin: 0 auto;
-        width: 90%;
-        display: flex;
-        background-color: var(--secondary-color);
-        font-size: .6rem;
-        font-family: 'Poppins';
-
-        .btn {
-            padding: 1rem;
-        }
-
-        .first {
-            background-color: white;
-            border: 2px solid var(--primary-color);
-            border-bottom: none;
-        }
+    .btn {
+      padding: 1rem;
     }
 
-    .mid-btns {
-        margin: 0 auto;
-        display: flex;
-        width: 90%;
-        justify-content: space-around;
+    .first {
+      background-color: white;
+      border: 2px solid var(--primary-color);
+      border-bottom: none;
+    }
+  }
 
-        img {
-            width: fit-content;
-            height: fit-content;
-        }
+  .mid-btns {
+    margin: 0 auto;
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
 
-        .seasons, .regular-playoff {
-            display: flex;    
-            align-items: center;
-
-            p {
-                font-size: .8rem;
-                font-family: 'Oswald';
-                background-color: var(--primary-color);
-                border-radius: 1rem;
-                padding: .4rem 1.1rem;
-                margin: 1rem .5rem;
-            }
-        }
+    img {
+      width: fit-content;
+      height: fit-content;
     }
 
-    .statistic-leader {
-        margin: .5rem auto;
-        padding-left: .5rem;
-        width: 100%;
+    .seasons,
+    .regular-playoff {
+      display: flex;
+      align-items: center;
 
-        .none {
-            display: none;
-        }
+      p {
+        font-size: 0.8rem;
+        font-family: "Oswald";
+        background-color: var(--primary-color);
+        border-radius: 1rem;
+        padding: 0.4rem 1.1rem;
+        margin: 1rem 0.5rem;
+      }
+    }
+  }
 
-        .active {
-            display: block;
-        }
+  .statistic-leader {
+    margin: 0.5rem auto;
+    padding-left: 0.5rem;
+    width: 100%;
 
-        .leader {
-            border: 1px solid var(--primary-color); 
-            margin-bottom: .5rem;
-            margin-right: 1rem;
-            border-radius: .4rem;
-
-            .top-row {
-                display: flex;
-                justify-content: space-between;
-                padding: 0 1rem;
-                border-bottom: 1px solid var(--primary-color);
-
-                p {
-                    font-size: .5rem;
-                    font-weight: 500;
-                    font-family: 'Noto Sans TC';
-                }
-
-                .grey {
-                    color: var(--fifth-color);
-                    margin: .5rem;
-                }
-            }
-
-            .mid-row {
-                display: flex;
-                justify-content: space-between;
-                padding: 0 .5rem;
-                margin-bottom: 1rem;
-
-
-                .numbers {
-                    font-size: 2.5rem;
-                    font-family: 'Oswald';
-                    font-weight: 800;
-                    color: ZzzzzZZZZZzz;
-                }
-
-                .team {
-                    font-size: .6rem;
-                    font-family: 'Noto Sans TC';
-                    font-weight: 700;
-                }
-
-                .name {
-                    font-size: .6rem;
-                    font-family: 'Poppins';
-                    font-weight: 700;
-                    margin-bottom: 1rem;
-                }
-
-                .grey {
-                    font-size: .6rem;
-                    color: var(--fifth-color);
-                    font-family: 'Noto Sans TC';
-                }
-
-                span {
-                    font-size: 2rem;
-                }  
-
-                .players-pic {
-                    margin-top: 3rem;
-                    
-                    img {
-                        width: 100%;     
-                        border-radius: .5rem;
-                    }
-                }
-            }
-
-            .yellow {
-                background-color: var(--sixth-color);
-            }
-
-            .bottom-row {
-                display: flex;
-                justify-content: space-between;
-                margin-bottom: 1rem;
-
-                .button {
-                    display: flex;
-                    justify-content: center;
-                    width: 32.5%;
-                    border-radius: .5rem; 
-                    border: 1px solid var(--primary-color);                 
-
-                    .ordinal {
-                        align-self: center;
-                        font-family: 'Oswald';
-                        margin-right: .5rem;
-
-                    }
-
-                    .leaders-info {
-                        padding: .5rem 0;
-
-                        .leaders-name {
-                            font-family: 'Poppins';
-                            font-size: .5rem;
-                            font-weight: 800;
-                            margin-bottom: .3rem;
-                        }
-
-                        .stats {
-                            color: var(--fifth-color);
-                            font-family: 'Poppins';
-                            font-size: .5rem;
-                            font-weight: 800;
-                        }
-
-                        .taiwanese {
-                            font-size: 1rem;
-                            font-family: 'Noto Sans TC';
-                            font-weight: 500;
-                        }
-                    }
-
-                    .down {
-                        padding-top: 1rem;
-
-                    }  
-                }
-            }
-
-            .color-none {
-                background-image: linear-gradient(white, var(--secondary-color));
-            }
-
-            p {
-                margin: .5rem;
-            }
-        }       
+    .none {
+      display: none;
     }
 
-    .bottom-cta {
-        display: flex;
-        justify-content: center;
-        margin-top: 1rem;
-        margin-bottom: 4rem;
+    .active {
+      display: block;
+    }
 
-        svg {
-            width: 1.5rem;
-            height: 1.5rem;
-            fill: var(--fourth-color);
-        }
+    .leader {
+      border: 1px solid var(--primary-color);
+      margin-bottom: 0.5rem;
+      margin-right: 1rem;
+      border-radius: 0.4rem;
+
+      .top-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1rem;
+        border-bottom: 1px solid var(--primary-color);
 
         p {
-            margin: 0 .3rem;
-            font-family: 'Noto Sans TC';
-            font-size: .8rem;
-            color: var(--fourth-color)
+          font-size: 0.5rem;
+          font-weight: 500;
+          font-family: "Noto Sans TC";
         }
 
-        .cta1, .cta2 {
-            display: flex;
-            align-items: center;
-            margin-right: .5rem;
+        .grey {
+          color: var(--fifth-color);
+          margin: 0.5rem;
         }
+      }
+
+      .mid-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0.5rem;
+        margin-bottom: 1rem;
+
+        .numbers {
+          font-size: 2.5rem;
+          font-family: "Oswald";
+          font-weight: 800;
+          color: ZzzzzZZZZZzz;
+        }
+
+        .team {
+          font-size: 0.6rem;
+          font-family: "Noto Sans TC";
+          font-weight: 700;
+        }
+
+        .name {
+          font-size: 0.6rem;
+          font-family: "Poppins";
+          font-weight: 700;
+          margin-bottom: 1rem;
+        }
+
+        .grey {
+          font-size: 0.6rem;
+          color: var(--fifth-color);
+          font-family: "Noto Sans TC";
+        }
+
+        span {
+          font-size: 2rem;
+        }
+
+        .players-pic {
+          margin-top: 3rem;
+
+          img {
+            width: 100%;
+            border-radius: 0.5rem;
+          }
+        }
+      }
+
+      .yellow {
+        background-color: var(--sixth-color);
+      }
+
+      .bottom-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        .button {
+          display: flex;
+          justify-content: center;
+          width: 32.5%;
+          border-radius: 0.5rem;
+          border: 1px solid var(--primary-color);
+
+          .ordinal {
+            align-self: center;
+            font-family: "Oswald";
+            margin-right: 0.5rem;
+          }
+
+          .leaders-info {
+            padding: 0.5rem 0;
+
+            .leaders-name {
+              font-family: "Poppins";
+              font-size: 0.5rem;
+              font-weight: 800;
+              margin-bottom: 0.3rem;
+            }
+
+            .stats {
+              color: var(--fifth-color);
+              font-family: "Poppins";
+              font-size: 0.5rem;
+              font-weight: 800;
+            }
+
+            .taiwanese {
+              font-size: 1rem;
+              font-family: "Noto Sans TC";
+              font-weight: 500;
+            }
+          }
+
+          .down {
+            padding-top: 1rem;
+          }
+        }
+      }
+
+      .color-none {
+        background-image: linear-gradient(white, var(--secondary-color));
+      }
+
+      p {
+        margin: 0.5rem;
+      }
     }
+  }
+
+  .bottom-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: var(--fourth-color);
+    }
+
+    p {
+      margin: 0 0.3rem;
+      font-family: "Noto Sans TC";
+      font-size: 0.8rem;
+      color: var(--fourth-color);
+    }
+
+    .cta1,
+    .cta2 {
+      display: flex;
+      align-items: center;
+      margin-right: 0.5rem;
+    }
+  }
 }
 
 section.player-shop-section {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 
-    .container {
-        width: 90%;
-        margin: 0 auto;
+  .container {
+    width: 90%;
+    margin: 0 auto;
 
-        .player-shop-logo {
-            position: relative;
-            text-align: center;
-            font-size: 2rem;
-            font-family: 'Poppins';
-            font-weight: 800;
-            width: 300px;
-            margin: 1rem auto;
+    .player-shop-logo {
+      position: relative;
+      text-align: center;
+      font-size: 2rem;
+      font-family: "Poppins";
+      font-weight: 800;
+      width: 300px;
+      margin: 1rem auto;
 
-            img {
-                position: absolute;
-                width: 13px;
-                height: 13px;
-                top: 13px;
-                left: 77px;
-            }
-        }
-
-
-        .player-shop-item {
-
-            .item {
-                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);  
-                margin: 1rem;
-                border-radius: .7rem;
-
-                    img {
-                        width: 100%;
-                    }
-
-                .item-cta {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    background-color: var(--third-color);
-                    border-radius: 0 0 .7rem .7rem;
-                    height: 50px;
-    
-                    p {
-                        margin: 1rem .5rem;
-                        font-family: 'Poppins';
-                        font-weight: 800;
-                        letter-spacing: .2rem;
-                    }
-
-                    svg {
-                        width: 1.2rem;
-                        height: 1.2rem;
-                    }
-                }
-            }
-        }
+      img {
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        top: 13px;
+        left: 77px;
+      }
     }
 
-    .load-more-cta {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--sixth-color);
-        border-radius: 5rem;
-        width: 150px;
-        margin: 1rem auto 0 auto;
-        padding: 1rem 1rem;
+    .player-shop-item {
+      .item {
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        margin: 1rem;
+        border-radius: 0.7rem;
 
-        .load-more-cta-pic {
-            width: 1.4rem;
-            height: 1.4rem;
-
-            img {
-                width: 100%;
-            }
+        img {
+          width: 100%;
         }
 
-        p {
-            color: var(--eighth-color);
-            font-size: 1rem;
+        .item-cta {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: var(--third-color);
+          border-radius: 0 0 0.7rem 0.7rem;
+          height: 50px;
+
+          p {
+            margin: 1rem 0.5rem;
+            font-family: "Poppins";
             font-weight: 800;
-            font-family: 'Poppins';
-            margin: 0 .5rem;
+            letter-spacing: 0.2rem;
+          }
+
+          svg {
+            width: 1.2rem;
+            height: 1.2rem;
+          }
         }
+      }
     }
+  }
+
+  .load-more-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--sixth-color);
+    border-radius: 5rem;
+    width: 150px;
+    margin: 1rem auto 0 auto;
+    padding: 1rem 1rem;
+
+    .load-more-cta-pic {
+      width: 1.4rem;
+      height: 1.4rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    p {
+      color: var(--eighth-color);
+      font-size: 1rem;
+      font-weight: 800;
+      font-family: "Poppins";
+      margin: 0 0.5rem;
+    }
+  }
 }
 
 section.footer-section {
+  .none {
+    display: none;
+  }
 
-    .none {
-        display: none;
+  .white-section {
+    li {
+      margin-bottom: 1.5rem;
+      font-family: "Noto Sans TC";
+      cursor: pointer;
     }
+  }
 
-    .white-section {
+  .black-section {
+    background-color: var(--eighth-color);
+    height: 400px;
+
+    .top-row {
+      .border {
+        margin: 0 auto;
+        width: 90%;
+        border: 1px solid var(--fourth-color);
+      }
+
+      ul {
+        padding: 1.5rem 2.5rem 0 2.5rem;
 
         li {
-            margin-bottom: 1.5rem;
-            font-family: 'Noto Sans TC';
-            cursor: pointer;
+          color: white;
+          margin-bottom: 1rem;
+          font-family: "Noto Sans TC";
+          font-size: 0.8rem;
+          cursor: pointer;
+          transition: 0.25s ease-in-out;
         }
+      }
     }
+    .flexbox {
+      display: flex;
+      align-items: flex-start;
+      margin: 3rem 0;
 
-    .black-section {
-        background-color: var(--eighth-color);
-        height: 400px;
+      li {
+        margin-right: 1rem;
+        padding: 0.4rem;
+        background-color: var(--fifth-color);
+        border-radius: 50%;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
 
-        .top-row {
-
-            .border {
-                margin: 0 auto;
-                width: 90%;
-                border: 1px solid var(--fourth-color);
-            }
-
-            ul {
-                padding: 1.5rem 2.5rem 0 2.5rem;
-
-                li {
-                    color: white;
-                    margin-bottom: 1rem;
-                    font-family: 'Noto Sans TC';
-                    font-size: .8rem;
-                    cursor:pointer;
-                    transition: .25s ease-in-out;
-                }
-            } 
+        svg {
+          fill: var(--eighth-color);
+          width: 1.2rem;
+          height: 1.2rem;
+          vertical-align: middle;
         }
-        .flexbox {
-            display: flex;
-            align-items: flex-start;
-            margin: 3rem 0;
+      }
 
-            li {
-               margin-right: 1rem;
-               padding: .4rem;
-               background-color: var(--fifth-color);
-               border-radius: 50%;
-               transition: .2s ease-in-out;
-               cursor: pointer;
-
-                svg {
-                    fill: var(--eighth-color);
-                    width: 1.2rem;
-                    height: 1.2rem;
-                    vertical-align: middle;
-                }
-            }
-
-            li:hover {
-                background-color: white;
-            }
-        }
+      li:hover {
+        background-color: white;
+      }
     }
+  }
 }
 
 nav {
-    position: fixed;
-    z-index: 999;
-    transform: translateX(100%);
-    width: 80%;
-    right: 0;
-    top: 0;
-    background-color:white;
-    height: 200vh;
-    padding: 2rem ;
-    transition: .2s ease-in-out .8s;
+  position: fixed;
+  z-index: 999;
+  transform: translateX(100%);
+  width: 80%;
+  right: 0;
+  top: 0;
+  background-color: white;
+  height: 200vh;
+  padding: 2rem;
+  transition: 0.2s ease-in-out 0.8s;
 
-    .flexbox {
-        display: flex;
-        justify-content: space-between;        
+  .flexbox {
+    display: flex;
+    justify-content: space-between;
 
-        ul {
-            padding: 0;
-            margin-top: 2rem;
+    ul {
+      padding: 0;
+      margin-top: 2rem;
 
-            li {
-                font-family: 'Noto Sans TC';
-                margin-bottom: 1.5rem;
-                font-size: 1.5rem;
-                font-weight: 500;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                cursor: pointer;
-
-                p {
-                    margin: 0;
-                    padding: 0;
-                }
-            }
-        }
-
-        ul:first-child {
-            width: 100%;
-
-            li:first-child{
-                display: flex;
-                align-items: center;
-                margin: 1rem 0 3rem 0;
-                justify-content: space-between;
-                
-                .user-image {
-                    width: 40px;
-                    height: 40px;
-                    margin-right: 1rem;
-        
-                    img {
-                        max-width: 100%;
-                        border-radius: 5rem;
-                    }
-                }
-                p{
-                    padding: 0;
-                    margin-left: -3rem;
-                    font-size: 1rem;
-                    font-weight: 500;
-                    font-family: 'Poppins';
-
-                    span {
-                        font-family: 'Noto Sans TC';
-                    }
-                }
-            }
-        }
-    }
-
-    .mobile-logo {
-        position: relative;
+      li {
+        font-family: "Noto Sans TC";
+        margin-bottom: 1.5rem;
         font-size: 1.5rem;
-        font-family: 'Poppins';
-        font-weight: 800;
-        width: 300px;
-        margin-bottom: 7rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
 
-        img {
-            position: absolute;
-            width: 9px;
-            height: 9px;
-            top: 11px;
-            left: 25px;
+        p {
+          margin: 0;
+          padding: 0;
         }
+      }
     }
 
-    .bottom {
-        
-        .flex {
-            display: flex;
-            align-items: center;
-            font-family: 'Noto Sans TC';
-            font-size: 1.1rem;
+    ul:first-child {
+      width: 100%;
 
-            .icon-shopping-bag, .icon-archive, .icon-help-circle, .icon-heart {
-                margin: 0;
-                cursor: pointer;
-            }
+      li:first-child {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0 3rem 0;
+        justify-content: space-between;
 
-            p {
-                margin-left: 1rem;
-                cursor: pointer;
-            }
+        .user-image {
+          width: 40px;
+          height: 40px;
+          margin-right: 1rem;
+
+          img {
+            max-width: 100%;
+            border-radius: 5rem;
+          }
         }
+        p {
+          padding: 0;
+          margin-left: -3rem;
+          font-size: 1rem;
+          font-weight: 500;
+          font-family: "Poppins";
+
+          span {
+            font-family: "Noto Sans TC";
+          }
+        }
+      }
     }
+  }
+
+  .mobile-logo {
+    position: relative;
+    font-size: 1.5rem;
+    font-family: "Poppins";
+    font-weight: 800;
+    width: 300px;
+    margin-bottom: 7rem;
+
+    img {
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      top: 11px;
+      left: 25px;
+    }
+  }
+
+  .bottom {
+    .flex {
+      display: flex;
+      align-items: center;
+      font-family: "Noto Sans TC";
+      font-size: 1.1rem;
+
+      .icon-shopping-bag,
+      .icon-archive,
+      .icon-help-circle,
+      .icon-heart {
+        margin: 0;
+        cursor: pointer;
+      }
+
+      p {
+        margin-left: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
-
-// #overlay {
-//     position: fixed;
-//     z-index: 1;
-//     display: none;
-//     width: 100%;
-//     height: 100%;
-//     top: 0;
-//     right: 0;
-//     left: 0;
-//     bottom: 0;
-//     transition: .5s ease-in-out 2s;
-//     backdrop-filter: blur(5px);
-//     -webkit-backdrop-filter: blur(5px);
-//     -moz-backdrop-filter: blur(5px);
-//     -o-backdrop-filter: blur(5px);
-//     -ms-backdrop-filter: blur(5px);
-//     // background-color: rgba(0, 0, 0, 0.12);
-// }
-
-
-
 @media only screen and (min-width: 768px) {
+  nav {
+    width: 40%;
+  }
 
-    nav {
-        width: 40%;
-    }
+  .hamburger.move {
+    transform: translateX(-220px) !important;
+  }
 
-    .hamburger.move {
-        transform: translateX(-220px)!important;
-    }
+  section.hero-section {
+    .container {
+      position: relative;
 
-    section.hero-section {
-        .container{
-            position: relative;
+      .banner-ipad-pc {
+        position: relative;
+        display: block;
+        background-image: url(../Images/JPG/Banner-pic-ipad-pc.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 40rem;
 
-            .banner-ipad-pc {
-                position: relative;
-                display: block;
-                background-image: url(../Images/JPG/Banner-pic-ipad-pc.jpg);
-                background-position: center;
-                background-size: cover;
-                background-repeat: no-repeat;
-                height: 40rem;
-            
-                .h1-ipad {
-                    display: block;
-                    position: absolute;
-                    top: 60%;
-                    left: 5%;
-                    color: white;
-                    font-size: 3rem;
-                    font-weight: 800;
-                }
-                p {
-                    position: absolute;
-                    color: white;
-                    top: 76%;
-                    left: 5%;
-                }
-            }
-            .hero-cta {
-                position: absolute;
-                top: 80%;
-                left: 8%;
-            }
-            .banner-mobile {
-                display: none;
-            }
-            .h1-mobile {
-                display: none;
-            }
+        .h1-ipad {
+          display: block;
+          position: absolute;
+          top: 60%;
+          left: 5%;
+          color: white;
+          font-size: 3rem;
+          font-weight: 800;
         }
+        p {
+          position: absolute;
+          color: white;
+          top: 76%;
+          left: 5%;
+        }
+      }
+      .hero-cta {
+        position: absolute;
+        top: 80%;
+        left: 8%;
+      }
+      .banner-mobile {
+        display: none;
+      }
+      .h1-mobile {
+        display: none;
+      }
+    }
+  }
+
+  section.game-schedule-section {
+    .one {
+      display: none;
     }
 
-    section.game-schedule-section {
+    .two {
+      display: block;
+    }
 
-        .one {
-            display: none;
+    .game-schedule-text {
+      font-size: 2rem;
+    }
+  }
+
+  section.team-stats-section {
+    .one {
+      display: none;
+    }
+
+    .two {
+      display: block;
+      padding: 0 5rem;
+    }
+
+    .header-section {
+      .header-text {
+        font-size: 2rem;
+      }
+
+      .color-reminder {
+        .yellow-best {
+          font-size: 1rem;
+
+          img {
+            width: 15px;
+          }
         }
 
-        .two {
+        .red-worst {
+          font-size: 1rem;
+
+          img {
+            width: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  section.subscribe-section {
+    .container {
+      justify-content: space-evenly;
+      height: 6rem;
+      padding: 0 3rem;
+
+      .logo-section {
+        padding-bottom: 1rem;
+
+        .left {
+          display: block;
+          position: relative;
+
+          .big {
+            font-size: 3.5rem;
+            font-family: "Poppins";
+            font-weight: 800;
+          }
+
+          svg {
+            position: absolute;
+            top: 60px;
+            left: -4px;
+          }
+
+          .svg2 {
+            left: 110px;
+          }
+
+          img {
+            position: absolute;
+            top: 25px;
+            left: 58px;
+            width: 20px;
+            height: 22px;
+            z-index: 999;
+          }
+        }
+
+        .email-cta {
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  section.statistic-section {
+    .mid-btns {
+      justify-content: start;
+
+      .seasons {
+        margin-right: 3rem;
+      }
+    }
+
+    .statistic-leader {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .leader {
+        width: 45%;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  section.player-shop-section {
+    .player-shop-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .item {
+        width: 45%;
+      }
+    }
+  }
+
+  section.footer-section {
+    .white-section {
+      display: flex;
+      justify-content: center;
+
+      ul {
+        margin: 0 2rem;
+        padding: 0;
+        text-align: left;
+
+        .none {
+          display: block;
+        }
+        li {
+          font-size: 0.8rem;
+          color: var(--fifth-color);
+        }
+        .big {
+          font-size: 1.4rem;
+          color: black;
+        }
+      }
+    }
+    .black-section {
+      display: flex;
+      justify-content: space-between;
+      height: 200px;
+
+      .top-row {
+        display: flex;
+
+        .border {
+          display: none;
+        }
+        ul {
+          padding: 0;
+          margin: 2rem 3rem;
+
+          .none {
             display: block;
-        }
 
-        .game-schedule-text {
-            font-size: 2rem;;
-        }
+            li {
+              color: var(--fifth-color);
+            }
 
+            li:hover {
+              color: white;
+            }
+          }
+        }
+      }
+      .flexbox {
+        margin: 1.8rem 1.5rem 0 0;
+        padding: 0;
+      }
+    }
+    .border2 {
+      display: block;
+      margin: 0 auto;
+      width: 90%;
+      border: 1px solid var(--fourth-color);
+      position: relative;
+      z-index: 99;
     }
 
-    section.team-stats-section {
-            .one {
-                display: none;
-            }
+    .bottom-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--eighth-color);
+      padding: 1rem;
+      margin-top: -2px;
 
-            .two {
-                display: block;
-                padding: 0 5rem;
-            }
+      .basketball-logo {
+        position: relative;
+        color: white;
+        font-family: "Poppins";
+        font-weight: 800;
+        font-size: 2rem;
 
-            .header-section {
-
-                .header-text {
-                    font-size: 2rem;
-                }
-        
-                .color-reminder {
-        
-                    .yellow-best {
-                        font-size: 1rem;
-
-                        img {
-                            width: 15px;
-                        }
-                    }
-        
-                    .red-worst {
-                        font-size: 1rem;
-
-                        img {
-                            width: 15px;
-                        }
-                    }
-                }
-            }
-        }         
-        
-    section.subscribe-section {
-        .container {
-            justify-content: space-evenly;
-            height: 6rem;
-            padding: 0 3rem;
-
-            .logo-section {
-                padding-bottom: 1rem;
-
-                 .left {
-                    display: block;
-                    position: relative;
-
-                    .big {   
-                        font-size: 3.5rem;
-                        font-family: 'Poppins';
-                        font-weight: 800;
-                    }
-
-                     svg {
-                        position: absolute;
-                        top: 60px;
-                        left: -4px;        
-                     }
-
-                     .svg2 {
-                         left: 110px;
-                     }
-
-                     img {
-                        position: absolute;
-                        top: 25px;
-                        left: 58px;
-                        width: 20px;
-                        height: 22px;
-                        z-index: 999;
-                    }
-                }
-
-                .email-cta {
-                    width: 300px;
-                }
-            }
+        img {
+          position: absolute;
+          top: 14px;
+          left: 33px;
+          width: 13px;
+          height: 13px;
         }
+      }
+
+      p {
+        color: var(--fifth-color);
+        font-family: "Noto Sans TC";
+        font-size: 0.8rem;
+
+        span {
+          font-family: "Poppins";
+          margin: 0 1rem;
+        }
+      }
     }
-
-    section.statistic-section {
-  
-        .mid-btns {
-            justify-content: start;
-
-            .seasons {
-                margin-right: 3rem;
-            }
-        }
-
-        .statistic-leader {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-            .leader {
-                width: 45%;
-                margin-bottom: 1rem;
-            }
-        }
-    }
-
-    section.player-shop-section {
-
-        .player-shop-item {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-            .item {
-                width: 45%;
-            }
-        }
-    }
-
-    section.footer-section {
-        .white-section {
-            display: flex;
-            justify-content: center;
-
-            ul {
-                margin: 0 2rem;
-                padding: 0;
-                text-align: left;
-
-                .none {
-                    display: block;
-                }
-                li {
-                    font-size: .8rem;
-                    color: var(--fifth-color)
-                }
-                .big {
-                    font-size: 1.4rem;
-                    color: black;
-                }
-            }
-        }
-        .black-section {
-            display: flex;
-            justify-content: space-between;
-            height: 200px;
-
-            .top-row {
-                display: flex;
-
-                .border {
-                    display: none;
-                }
-                ul {
-                    padding: 0;
-                    margin: 2rem 3rem;
-
-                    .none {
-                        display: block;
-
-                        li {
-                            color: var(--fifth-color);
-                        }
-
-                        li:hover {
-                            color: white;
-                        }
-                    }
-                }
-            }
-            .flexbox {
-                margin: 1.8rem 1.5rem 0 0;
-                padding: 0;
-            }
-        }
-        .border2 {
-            display: block;
-            margin: 0 auto;
-            width: 90%;
-            border: 1px solid var(--fourth-color);
-            position: relative;
-            z-index: 99;
-        }
-
-        .bottom-row {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: var(--eighth-color);
-            padding: 1rem;
-            margin-top: -2px;
-
-            .basketball-logo {
-                position: relative;
-                color: white;
-                font-family: 'Poppins';
-                font-weight: 800;
-                font-size: 2rem;
-
-                img {
-                    position: absolute;
-                    top: 14px;
-                    left: 33px;
-                    width: 13px;
-                    height: 13px;
-                }               
-            }
-
-            p {
-                color: var(--fifth-color);
-                font-family: 'Noto Sans TC';
-                font-size: .8rem;
-
-                span {
-                    font-family: 'Poppins';
-                    margin: 0 1rem;
-                }
-            }
-        }
-    }
+  }
 }
 
 @media only screen and (min-width: 1024px) {
-    .navbar {
-        .grey-top {
-            display: block;
-            background-color: var(--secondary-color);
-            text-align: right;
-            padding: .1rem 2.4rem;
+  .navbar {
+    .grey-top {
+      display: block;
+      background-color: var(--secondary-color);
+      text-align: right;
+      padding: 0.1rem 2.4rem;
 
-            .flexbox {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                padding: 0 1rem;
-    
-                .user-image {
-                    width: 25px;
-                    margin: 0 .5rem;
-                    cursor: pointer;
-                    
-                    img {
-                        width: 100%;
-                        border-radius: 50%;
-                    }
-                }
+      .flexbox {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 1rem;
 
-                span {
-                    font-family: 'Noto Sans TC';
-                    font-size: .9rem;
-                    margin: 0 .2rem;
-                    cursor: pointer;
-                }
-            }   
+        .user-image {
+          width: 25px;
+          margin: 0 0.5rem;
+          cursor: pointer;
+
+          img {
+            width: 100%;
+            border-radius: 50%;
+          }
         }
 
-        .white-mid {
-            padding: 1rem 2.9rem 1rem 3.3rem;
-
-            .mid-col {
-                display: flex;
-                padding-left: 9rem;
-                align-items: center;
-                height: 100%;
-
-                div{
-                    border: 2px solid white;
-                    margin: 0 1rem;
-                    transition: .25s ease-in-out;
-                }
-
-                div:hover {
-                    border-bottom: 2px solid black;
-                }
-
-                a {
-                    font-family: 'Noto Sans TC';
-                    font-size: 1.2rem;
-                }
-            }
-
-            .right-col {             
-                position: relative;
-                display: flex;
-                align-items: center;
-
-                .search2, .hamburger {
-                    display: none;
-                }
-                
-                .icon-search, .search-input {
-                    display: inline-block;
-                    transition: .25s ease-in-out;
-                }
-
-                .search-input:hover {
-                    background-color: var(--primary-color);
-                }
-
-                .heart, .search {
-                    display: block;
-                    padding: .5rem;
-                    height: fit-content;
-                    margin-left: 1.5rem;
-                    border-radius: 50%;
-                }
-
-                .heart:hover, .search:hover {
-                    transition: .25s ease-in-out;
-                    background-color: var(--primary-color);
-                }
-
-                .shopping-bag {
-                    margin-left: 1rem;
-                    border-radius: 50%;
-                }
-
-                .search {
-                    position: absolute;
-                    top: 1px;
-                    left: -22px;
-                }
-
-                ::-webkit-input-placeholder {color: #d6d6d6;}
-
-                .search-input {
-                    background-color: var(--secondary-color);
-                    border-radius: 3rem;
-                    border: none;
-                    width: 180px;
-                    font-family: 'Noto Sans TC';
-                    font-weight: 400;
-                    font-size: 1.2rem;
-                    padding: .5rem 0 .6rem 3.2rem;
-                    vertical-align: middle;
-                    outline:none;
-                }
-            }
+        span {
+          font-family: "Noto Sans TC";
+          font-size: 0.9rem;
+          margin: 0 0.2rem;
+          cursor: pointer;
         }
-    }
-    section.hero-section {
-        .container {
-            padding: 0 3.5rem;
-
-            .banner-ipad-pc {
-                height: 50rem;
-
-                .h1-ipad {
-                    font-size: 5rem;
-                    left: 5%
-                }
-
-                p {
-                    top: 82%;
-                    left: 5%;
-                    font-size: 1.5rem;
-                }
-            }
-            .hero-cta {
-                left: 10%;
-                top: 86%;
-            }
-        }
+      }
     }
 
-    section.statistic-section {
-        .statistic-leader {
-            .leader {
-                .mid-row {
-                    justify-content: space-evenly;
-                    .players-pic {
-                        width: 60%;
-                    }
-                }
-            }
+    .white-mid {
+      padding: 1rem 2.9rem 1rem 3.3rem;
+
+      .mid-col {
+        display: flex;
+        padding-left: 9rem;
+        align-items: center;
+        height: 100%;
+
+        div {
+          border: 2px solid white;
+          margin: 0 1rem;
+          transition: 0.25s ease-in-out;
         }
+
+        div:hover {
+          border-bottom: 2px solid black;
+        }
+
+        a {
+          font-family: "Noto Sans TC";
+          font-size: 1.2rem;
+        }
+      }
+
+      .right-col {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .search2,
+        .hamburger {
+          display: none;
+        }
+
+        .icon-search,
+        .search-input {
+          display: inline-block;
+          transition: 0.25s ease-in-out;
+        }
+
+        .search-input:hover {
+          background-color: var(--primary-color);
+        }
+
+        .heart,
+        .search {
+          display: block;
+          padding: 0.5rem;
+          height: fit-content;
+          margin-left: 1.5rem;
+          border-radius: 50%;
+        }
+
+        .heart:hover,
+        .search:hover {
+          transition: 0.25s ease-in-out;
+          background-color: var(--primary-color);
+        }
+
+        .shopping-bag {
+          margin-left: 1rem;
+          border-radius: 50%;
+        }
+
+        .search {
+          position: absolute;
+          top: 1px;
+          left: -22px;
+        }
+
+        ::-webkit-input-placeholder {
+          color: #d6d6d6;
+        }
+
+        .search-input {
+          background-color: var(--secondary-color);
+          border-radius: 3rem;
+          border: none;
+          width: 180px;
+          font-family: "Noto Sans TC";
+          font-weight: 400;
+          font-size: 1.2rem;
+          padding: 0.5rem 0 0.6rem 3.2rem;
+          vertical-align: middle;
+          outline: none;
+        }
+      }
     }
+  }
+  section.hero-section {
+    .container {
+      padding: 0 3.5rem;
+
+      .banner-ipad-pc {
+        height: 50rem;
+
+        .h1-ipad {
+          font-size: 5rem;
+          left: 5%;
+        }
+
+        p {
+          top: 82%;
+          left: 5%;
+          font-size: 1.5rem;
+        }
+      }
+      .hero-cta {
+        left: 10%;
+        top: 86%;
+      }
+    }
+  }
+
+  section.statistic-section {
+    .statistic-leader {
+      .leader {
+        .mid-row {
+          justify-content: space-evenly;
+          .players-pic {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1440px) {
-
-    section.hero-section {
-        .container {
-            .banner-ipad-pc {
-                .h1-ipad {
-                    left: 4%;
-                }
-            }
-
-            .hero-cta {
-                left: 8%;
-            }
-
+  section.hero-section {
+    .container {
+      .banner-ipad-pc {
+        .h1-ipad {
+          left: 4%;
         }
+      }
+
+      .hero-cta {
+        left: 8%;
+      }
+    }
+  }
+
+  section.game-schedule-section {
+    .two {
+      display: none;
     }
 
-    section.game-schedule-section {
-        .two {
-            display: none;
-        }
+    .three {
+      display: block;
+    }
+  }
 
-        .three {
-            display: block;
-
-        }
+  section.team-stats-section {
+    .two {
+      display: none;
     }
 
-    section.team-stats-section {
-        .two {
-            display: none;
-        }
-
-        .three {
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        .team-stats {
-
-            .three {
-                padding: 0 10rem;
-
-                .team {
-                    width: 100%;
-    
-                    .bottom-stats {
-                        width: 90%;
-                        margin: .5rem auto;
-                    }
-                }
-            }
-        }
+    .three {
+      display: flex;
+      justify-content: space-evenly;
     }
 
-    section.subscribe-section {
-        .container {
-            justify-content: center;
-            height: 8rem;
-            padding: 0 3rem;
+    .team-stats {
+      .three {
+        padding: 0 10rem;
 
-            .logo-section {
-                padding-bottom: 1rem;
-                margin-right: 2rem;
+        .team {
+          width: 100%;
 
-                 .left {
-                    display: block;
-                    position: relative;
-
-                    .big {   
-                        font-size: 5rem;
-                        font-family: 'Poppins';
-                        font-weight: 800;
-                    }
-
-                     svg {
-                        position: absolute;
-                        top: 88px;
-                        left: -4px;   
-                     }
-
-                     .svg2 {
-                         left: 161px;
-                         font-size: 2rem;
-                     }
-
-                     img {
-                        position: absolute;
-                        top: 38px;
-                        left: 87px;
-                        width: 25px;
-                        height: 27px;
-                        z-index: 999;
-                    }
-                }
-            }
-
-            .email-cta {
-                width: 300px;
-
-                .email {
-                    border-radius: .3rem 0 0 .3rem;
-                    height: 2rem;
-                    font-size: 1rem;
-                }
-            }
-
-            .subscribe-btn {
-                border-radius: 0 .3rem .3rem 0;
-                height: 2rem;
-                font-size: 1rem;
-            }
+          .bottom-stats {
+            width: 90%;
+            margin: 0.5rem auto;
+          }
         }
+      }
+    }
+  }
+
+  section.subscribe-section {
+    .container {
+      justify-content: center;
+      height: 8rem;
+      padding: 0 3rem;
+
+      .logo-section {
+        padding-bottom: 1rem;
+        margin-right: 2rem;
+
+        .left {
+          display: block;
+          position: relative;
+
+          .big {
+            font-size: 5rem;
+            font-family: "Poppins";
+            font-weight: 800;
+          }
+
+          svg {
+            position: absolute;
+            top: 88px;
+            left: -4px;
+          }
+
+          .svg2 {
+            left: 161px;
+            font-size: 2rem;
+          }
+
+          img {
+            position: absolute;
+            top: 38px;
+            left: 87px;
+            width: 25px;
+            height: 27px;
+            z-index: 999;
+          }
+        }
+      }
+
+      .email-cta {
+        width: 300px;
+
+        .email {
+          border-radius: 0.3rem 0 0 0.3rem;
+          height: 2rem;
+          font-size: 1rem;
+        }
+      }
+
+      .subscribe-btn {
+        border-radius: 0 0.3rem 0.3rem 0;
+        height: 2rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  section.statistic-section {
+    .top-btns,
+    .mid-btns {
+      width: 63%;
     }
 
-    section.statistic-section {
+    .statistic-leader {
+      width: 70%;
+    }
+  }
 
-        
-        .top-btns, .mid-btns {
-            width: 63%;
-        }
+  section.player-shop-section {
+    .player-shop-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
 
-        .statistic-leader {
-            width: 70%;
-        }
+      .item {
+        width: 22%;
+      }
+    }
+  }
+
+  section.footer-section {
+    .black-section {
+      padding: 0 15%;
+
+      .flexbox {
+        padding-right: 1rem;
+      }
     }
 
-    section.player-shop-section {
-        .player-shop-item {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-            .item {
-                width: 22%;
-            }
-        }
+    .border2 {
+      width: 63%;
     }
-
-    section.footer-section {
-        .black-section {
-            padding: 0 15%;
-
-            .flexbox {
-                padding-right: 1rem;
-            }
-        }
-
-        .border2 {
-            width: 63%;
-        }
-    }
+  }
 }
